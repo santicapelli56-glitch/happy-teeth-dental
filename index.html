@@ -1,0 +1,1240 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Happy Teeth Dental, LLC | Diseño de Sonrisa en West Miami — Dr. Alejandro Rodriguez, DDS</title>
+<meta name="description" content="Diseño de sonrisa a tu medida en Happy Teeth Dental, West Miami. Evaluación honesta, sin compromiso. 4.9★ en Google con 297 reseñas. Se habla español e inglés.">
+<link rel="icon" type="image/png" href="images/logo-official-v2.png">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:ital,wght@0,400;0,500;0,600;0,700;0,800;1,500&display=swap" rel="stylesheet">
+<style>
+  :root{
+    --navy-900:#0b2a4a;
+    --navy-800:#16425b;
+    --navy-700:#1d5875;
+    --navy-100:#e7eef1;
+    --accent:#1e6fd9;
+    --accent-dark:#144f9c;
+    --mint:#1d9e75;
+    --bg:#f7f9fa;
+    --white:#ffffff;
+    --text:#17262e;
+    --text-muted:#5c6b73;
+    --border:#e1e7ea;
+    --shadow:0 10px 30px rgba(11,42,74,0.12);
+    --shadow-sm:0 4px 14px rgba(11,42,74,0.08);
+    --radius-lg:20px;
+    --radius:14px;
+    --radius-sm:8px;
+    --font:'Plus Jakarta Sans', -apple-system, sans-serif;
+    --maxw:1180px;
+  }
+  *,*::before,*::after{box-sizing:border-box;}
+  html{scroll-behavior:smooth;}
+  body{margin:0;font-family:var(--font);color:var(--text);background:var(--bg);line-height:1.55;-webkit-font-smoothing:antialiased;}
+  img,svg{display:block;max-width:100%;}
+  a{color:inherit;}
+  h1,h2,h3,h4{font-family:var(--font);font-weight:800;line-height:1.15;margin:0;color:var(--navy-900);}
+  p{margin:0;}
+  ul{margin:0;padding:0;list-style:none;}
+  button{font-family:var(--font);cursor:pointer;}
+  .container{max-width:var(--maxw);margin:0 auto;padding:0 20px;}
+  .eyebrow{display:inline-flex;align-items:center;gap:8px;font-size:.78rem;font-weight:700;letter-spacing:.08em;text-transform:uppercase;color:var(--accent);margin-bottom:14px;}
+  .section{padding:64px 0;}
+  .section-head{max-width:640px;margin:0 0 36px;}
+  .section-head h2{font-size:1.9rem;margin-bottom:12px;}
+  .section-head p{color:var(--text-muted);font-size:1.02rem;}
+  .section-head.center{margin-left:auto;margin-right:auto;text-align:center;}
+  .btn{display:inline-flex;align-items:center;justify-content:center;gap:8px;padding:15px 26px;border-radius:999px;font-weight:700;font-size:.98rem;border:none;text-decoration:none;transition:transform .15s ease, box-shadow .15s ease, background .15s ease;white-space:nowrap;}
+  .btn-primary{background:var(--accent);color:#fff;box-shadow:0 8px 20px rgba(30,111,217,.32);}
+  .btn-primary:hover{background:var(--accent-dark);transform:translateY(-1px);}
+  .btn-secondary{background:transparent;color:var(--navy-800);border:1.5px solid var(--navy-800);}
+  .btn-secondary:hover{background:var(--navy-800);color:#fff;}
+  .btn-ghost{background:transparent;color:var(--navy-800);font-weight:700;padding:10px 4px;}
+  .btn-block{width:100%;}
+  .icon{width:22px;height:22px;stroke:currentColor;fill:none;stroke-width:1.8;flex-shrink:0;}
+  .reveal{opacity:0;transform:translateY(18px);transition:opacity .6s ease, transform .6s ease;}
+  .reveal.in-view{opacity:1;transform:translateY(0);}
+  @media (prefers-reduced-motion:reduce){
+    .reveal{opacity:1;transform:none;transition:none;}
+    html{scroll-behavior:auto;}
+  }
+
+  /* ANNOUNCEMENT BAR + HEADER */
+  .sticky-stack{position:sticky;top:0;z-index:200;}
+  .announce-bar{background:var(--navy-900);color:#fff;font-size:.8rem;font-weight:500;}
+  .announce-bar .container{display:flex;align-items:center;justify-content:space-between;gap:12px;padding-top:8px;padding-bottom:8px;}
+  .announce-bar a{text-decoration:none;font-weight:700;display:flex;align-items:center;gap:6px;white-space:nowrap;flex-shrink:0;}
+  .announce-bar a .icon{width:15px;height:15px;flex-shrink:0;}
+  .announce-msg{white-space:nowrap;overflow:hidden;text-overflow:ellipsis;flex:1;min-width:0;}
+  @media (max-width:480px){
+    .announce-bar{font-size:.7rem;}
+    .announce-bar .container{padding-top:7px;padding-bottom:7px;gap:8px;}
+  }
+  .site-header{background:#fff;border-bottom:1px solid transparent;transition:box-shadow .2s ease, padding .2s ease;}
+  .site-header .container{display:flex;align-items:center;justify-content:space-between;padding-top:16px;padding-bottom:16px;transition:padding .2s ease;}
+  .site-header.scrolled .container{padding-top:10px;padding-bottom:10px;}
+  .site-header.scrolled{box-shadow:0 4px 18px rgba(11,42,74,.08);}
+  .logo{display:flex;align-items:center;gap:10px;text-decoration:none;}
+  .logo-badge{width:44px;height:44px;display:flex;align-items:center;justify-content:center;flex-shrink:0;}
+  .logo-badge img{width:100%;height:100%;object-fit:contain;}
+  .logo-text{font-weight:800;font-size:1.05rem;color:var(--navy-900);line-height:1.1;}
+  .logo-text span{display:block;font-weight:500;font-size:.68rem;color:var(--text-muted);text-transform:uppercase;letter-spacing:.05em;}
+  .main-nav{display:none;}
+  .main-nav ul{display:flex;gap:28px;align-items:center;}
+  .main-nav a{text-decoration:none;font-weight:600;font-size:.92rem;color:var(--navy-800);}
+  .header-actions{display:flex;align-items:center;gap:10px;}
+  .lang-toggle{display:flex;border:1.5px solid var(--border);border-radius:999px;padding:3px;gap:2px;flex-shrink:0;}
+  .lang-btn{border:none;background:transparent;padding:6px 10px;border-radius:999px;font-size:.72rem;font-weight:800;letter-spacing:.03em;color:var(--text-muted);}
+  .lang-btn.active{background:var(--navy-900);color:#fff;}
+  .en-only{display:none;}
+  html[lang="en"] .en-only{display:block;}
+  .hamburger{display:flex;align-items:center;justify-content:center;width:42px;height:42px;background:transparent;border:1.5px solid var(--border);border-radius:10px;}
+  .hamburger .icon{width:22px;height:22px;stroke:var(--navy-900);}
+  .header-actions .btn-primary{display:none;padding:12px 20px;font-size:.88rem;}
+
+  .mobile-menu{position:fixed;inset:0;background:rgba(11,42,74,.5);z-index:300;display:none;}
+  .mobile-menu.open{display:block;}
+  .mobile-menu-panel{position:absolute;top:0;right:0;bottom:0;width:min(320px,84vw);background:#fff;padding:24px;display:flex;flex-direction:column;gap:6px;box-shadow:-8px 0 30px rgba(0,0,0,.15);}
+  .mobile-menu-panel a{padding:14px 6px;text-decoration:none;font-weight:700;color:var(--navy-900);border-bottom:1px solid var(--border);font-size:1.02rem;}
+  .mobile-menu-top{display:flex;justify-content:flex-end;margin-bottom:10px;}
+  .mobile-menu-close{width:38px;height:38px;border-radius:10px;border:1.5px solid var(--border);background:none;display:flex;align-items:center;justify-content:center;}
+  .mobile-menu-close .icon{width:20px;height:20px;}
+  .mobile-menu-panel .btn-primary{margin-top:16px;}
+
+  /* HERO */
+  .hero{padding:44px 0 90px;background:linear-gradient(180deg,#eef4f6 0%, var(--bg) 60%);}
+  .hero-grid{display:grid;grid-template-columns:1fr;gap:44px;align-items:center;}
+  .hero-text h1{font-size:2.1rem;letter-spacing:-.01em;margin-bottom:18px;}
+  .hero-text .sub{font-size:1.08rem;color:var(--text-muted);margin-bottom:26px;max-width:520px;}
+  .hero-ctas{display:flex;flex-wrap:wrap;gap:14px;margin-bottom:22px;}
+  .social-proof-line{display:flex;align-items:center;gap:10px;font-size:.92rem;color:var(--navy-800);font-weight:600;}
+  .social-proof-line .stars{color:#e8a13d;letter-spacing:1px;}
+  .hero-visual{position:relative;}
+  .ba-frame{position:relative;margin:0;width:100%;border-radius:var(--radius-lg);overflow:hidden;box-shadow:var(--shadow);background:var(--navy-800);}
+  .ba-frame img{width:100%;height:100%;display:block;object-fit:cover;aspect-ratio:3/3.05;}
+  .ba-tag{position:absolute;left:16px;font-size:.72rem;font-weight:800;letter-spacing:.08em;text-transform:uppercase;color:#fff;background:rgba(11,42,74,.62);padding:6px 12px;border-radius:999px;z-index:2;}
+  .ba-tag-top{top:16px;}
+  .ba-tag-bottom{bottom:16px;}
+  .ba-real-badge{position:absolute;top:16px;right:16px;font-size:.68rem;font-weight:700;color:#0b2a4a;background:rgba(255,255,255,.92);padding:6px 12px;border-radius:999px;z-index:2;}
+  .hero-badges{position:relative;display:flex;flex-wrap:wrap;gap:14px;margin-top:18px;z-index:6;}
+  .price-card{background:#fff;border-radius:var(--radius);padding:14px 18px;box-shadow:var(--shadow);flex:1;min-width:140px;text-align:left;}
+  .price-card .num{font-size:1.35rem;font-weight:800;color:var(--navy-900);display:flex;align-items:baseline;gap:4px;}
+  .price-card .num .icon{width:18px;height:18px;color:#e8a13d;stroke:#e8a13d;fill:#e8a13d;margin-bottom:2px;}
+  .price-card .label{font-size:.76rem;color:var(--text-muted);font-weight:600;margin-top:2px;}
+  .price-card.accent-card{background:var(--accent);}
+  .price-card.accent-card .num,.price-card.accent-card .label{color:#fff;}
+
+  /* GENERIC PLACEHOLDER BLOCKS */
+  .ph-block{border-radius:var(--radius);background:linear-gradient(135deg,var(--navy-800),var(--navy-700));display:flex;align-items:center;justify-content:center;color:#fff;position:relative;overflow:hidden;}
+  .side-photo{margin:0;border-radius:var(--radius);overflow:hidden;box-shadow:var(--shadow-sm);}
+  .side-photo img{display:block;width:100%;height:100%;object-fit:cover;aspect-ratio:4/3;}
+  .ph-block .icon{width:40px;height:40px;stroke:#fff;opacity:.85;}
+
+  /* QUALIFY SECTION */
+  .qualify-list{display:grid;grid-template-columns:1fr;gap:16px;}
+  .qualify-item{display:flex;gap:14px;background:#fff;border:1px solid var(--border);border-radius:var(--radius);padding:18px 20px;}
+  .qualify-item .icon-wrap{width:36px;height:36px;border-radius:50%;background:var(--navy-100);display:flex;align-items:center;justify-content:center;flex-shrink:0;}
+  .qualify-item .icon-wrap .icon{width:18px;height:18px;stroke:var(--navy-800);}
+  .qualify-item p{font-weight:600;color:var(--navy-900);font-size:.98rem;}
+
+  /* RESULTADO REALISTA */
+  .realistic{background:var(--navy-900);color:#fff;border-radius:var(--radius-lg);padding:48px 32px;display:grid;grid-template-columns:1fr;gap:32px;}
+  .realistic .eyebrow{color:var(--mint);}
+  .realistic h2{color:#fff;font-size:1.7rem;margin-bottom:16px;}
+  .realistic p.body{color:rgba(255,255,255,.82);font-size:1.02rem;max-width:640px;}
+  .realistic-points{display:grid;grid-template-columns:1fr;gap:16px;}
+  .realistic-point{display:flex;gap:12px;align-items:flex-start;}
+  .realistic-point .icon{width:20px;height:20px;stroke:var(--mint);margin-top:2px;}
+  .realistic-point p{font-weight:600;font-size:.94rem;}
+
+  /* CANDIDATURA */
+  .candidacy-grid{display:grid;grid-template-columns:1fr;gap:20px;}
+  .candidacy-col{background:#fff;border-radius:var(--radius);padding:26px;border:1px solid var(--border);}
+  .candidacy-col.yes{border-top:4px solid var(--mint);}
+  .candidacy-col.no{border-top:4px solid var(--accent);}
+  .candidacy-col h3{font-size:1.12rem;margin-bottom:16px;display:flex;align-items:center;gap:10px;}
+  .candidacy-col h3 .icon{width:22px;height:22px;}
+  .candidacy-col.yes h3 .icon{stroke:var(--mint);}
+  .candidacy-col.no h3 .icon{stroke:var(--accent);}
+  .candidacy-col li{display:flex;gap:10px;padding:9px 0;font-size:.94rem;color:var(--text);border-bottom:1px dashed var(--border);}
+  .candidacy-col li:last-child{border-bottom:none;}
+  .candidacy-col li .icon{width:16px;height:16px;margin-top:3px;flex-shrink:0;}
+  .candidacy-note{margin-top:22px;font-size:.9rem;color:var(--text-muted);font-style:italic;text-align:center;}
+
+  /* SERVICIOS GRID */
+  .services-grid{display:grid;grid-template-columns:repeat(2,1fr);gap:16px;}
+  .service-card{background:#fff;border:1px solid var(--border);border-radius:var(--radius);padding:22px 18px;text-align:center;transition:transform .15s ease, box-shadow .15s ease;}
+  .service-card:hover{transform:translateY(-3px);box-shadow:var(--shadow-sm);}
+  .service-card .icon-wrap{width:48px;height:48px;border-radius:50%;background:var(--navy-100);display:flex;align-items:center;justify-content:center;margin:0 auto 12px;}
+  .service-card .icon-wrap .icon{width:24px;height:24px;stroke:var(--navy-800);}
+  .service-card h4{font-size:.94rem;margin-bottom:4px;}
+  .service-card p{font-size:.8rem;color:var(--text-muted);}
+
+  /* RESEÑAS */
+  .reviews-badge-row{display:flex;flex-wrap:wrap;align-items:center;gap:16px;margin-bottom:30px;}
+  .google-badge{display:flex;align-items:center;gap:12px;background:#fff;border:1px solid var(--border);border-radius:var(--radius);padding:14px 20px;box-shadow:var(--shadow-sm);}
+  .google-badge .g-icon{width:30px;height:30px;}
+  .google-badge .g-text b{font-size:1.15rem;color:var(--navy-900);}
+  .google-badge .g-text .stars{color:#e8a13d;font-size:.85rem;letter-spacing:1px;}
+  .google-badge .g-text span.count{color:var(--text-muted);font-size:.82rem;display:block;}
+  .fb-mention{font-size:.86rem;color:var(--text-muted);display:flex;align-items:center;gap:8px;}
+  .fb-mention a{color:var(--navy-800);font-weight:700;text-decoration:none;}
+  .reviews-carousel{position:relative;overflow:hidden;}
+  .reviews-track{display:flex;transition:transform .45s ease;touch-action:pan-y;}
+  .review-card{flex:0 0 100%;padding:4px;}
+  .review-card-inner{background:#fff;border:1px solid var(--border);border-radius:var(--radius);padding:26px;height:100%;}
+  .review-card-inner .stars{color:#e8a13d;font-size:.95rem;letter-spacing:2px;margin-bottom:10px;display:block;}
+  .review-card-inner p.quote{font-size:.96rem;color:var(--text);margin-bottom:16px;}
+  .review-meta{display:flex;align-items:center;gap:10px;}
+  .review-avatar{width:38px;height:38px;border-radius:50%;background:var(--navy-800);color:#fff;display:flex;align-items:center;justify-content:center;font-weight:700;font-size:.85rem;flex-shrink:0;}
+  .review-meta .name{font-weight:700;font-size:.88rem;color:var(--navy-900);}
+  .review-meta .meta-sub{font-size:.76rem;color:var(--text-muted);}
+  .carousel-dots{display:flex;justify-content:center;gap:8px;margin-top:18px;}
+  .carousel-dots button{width:9px;height:9px;border-radius:50%;background:var(--border);border:none;padding:0;}
+  .carousel-dots button.active{background:var(--accent);width:22px;border-radius:6px;transition:width .2s ease;}
+
+  /* PROCESO */
+  .process-grid{display:grid;grid-template-columns:1fr;gap:22px;}
+  .process-step{background:#fff;border-radius:var(--radius);padding:26px;border:1px solid var(--border);position:relative;}
+  .process-num{width:38px;height:38px;border-radius:50%;background:var(--accent);color:#fff;display:flex;align-items:center;justify-content:center;font-weight:800;margin-bottom:14px;}
+  .process-step h3{font-size:1.05rem;margin-bottom:8px;}
+  .process-step p{font-size:.92rem;color:var(--text-muted);}
+
+  /* REASSURANCE */
+  .reassure{background:var(--navy-100);border-radius:var(--radius-lg);padding:38px 30px;display:flex;gap:20px;align-items:flex-start;}
+  .reassure .icon-wrap{width:52px;height:52px;border-radius:50%;background:#fff;display:flex;align-items:center;justify-content:center;flex-shrink:0;box-shadow:var(--shadow-sm);}
+  .reassure .icon-wrap .icon{width:26px;height:26px;stroke:var(--mint);}
+  .reassure h3{font-size:1.2rem;margin-bottom:8px;}
+  .reassure p{color:var(--text-muted);font-size:.98rem;}
+
+  /* FAQ */
+  .faq-item{border-bottom:1px solid var(--border);}
+  .faq-q{width:100%;background:none;border:none;display:flex;align-items:center;justify-content:space-between;gap:16px;padding:20px 4px;text-align:left;font-size:1rem;font-weight:700;color:var(--navy-900);}
+  .faq-q .icon{width:20px;height:20px;stroke:var(--navy-800);transition:transform .2s ease;flex-shrink:0;}
+  .faq-item.open .faq-q .icon{transform:rotate(45deg);}
+  .faq-a{max-height:0;overflow:hidden;transition:max-height .25s ease;}
+  .faq-a-inner{padding:0 4px 20px;color:var(--text-muted);font-size:.95rem;max-width:680px;}
+
+  /* CONTACT FORM */
+  .contact-wrap{display:grid;grid-template-columns:1fr;gap:36px;}
+  .contact-form{background:#fff;border-radius:var(--radius-lg);padding:30px;box-shadow:var(--shadow);position:relative;}
+  .form-row{margin-bottom:18px;}
+  .form-row label{display:block;font-size:.86rem;font-weight:700;color:var(--navy-900);margin-bottom:7px;}
+  .form-row input,.form-row select,.form-row textarea{width:100%;padding:14px 16px;border-radius:var(--radius-sm);border:1.5px solid var(--border);font-family:var(--font);font-size:.98rem;background:#fbfcfc;transition:border-color .15s ease, box-shadow .15s ease;}
+  .form-row input:focus,.form-row select:focus,.form-row textarea:focus{outline:none;border-color:var(--navy-700);box-shadow:0 0 0 3px rgba(27,74,99,.15);}
+  .form-row textarea{resize:vertical;min-height:90px;}
+  .form-alt-contact{display:flex;flex-direction:column;gap:14px;padding-top:18px;border-top:1px solid var(--border);margin-top:6px;}
+  .form-alt-contact a{display:flex;align-items:center;gap:10px;text-decoration:none;font-weight:700;color:var(--navy-800);font-size:.94rem;}
+  .form-alt-contact .icon{width:20px;height:20px;}
+  .form-success{position:absolute;inset:0;background:#fff;border-radius:var(--radius-lg);display:none;flex-direction:column;align-items:center;justify-content:center;text-align:center;padding:30px;}
+  .form-success.show{display:flex;}
+  .form-success .check-circle{width:64px;height:64px;border-radius:50%;background:var(--mint);display:flex;align-items:center;justify-content:center;margin-bottom:18px;animation:pop .4s ease;}
+  .form-success .check-circle .icon{width:32px;height:32px;stroke:#fff;stroke-width:2.4;}
+  @keyframes pop{0%{transform:scale(0);}70%{transform:scale(1.12);}100%{transform:scale(1);}}
+  .form-success h3{font-size:1.2rem;margin-bottom:8px;}
+  .form-success p{color:var(--text-muted);font-size:.94rem;max-width:340px;}
+  .contact-side{display:flex;flex-direction:column;gap:18px;}
+  .contact-side .info-card{background:var(--navy-900);color:#fff;border-radius:var(--radius);padding:26px;}
+  .contact-side .info-card h3{color:#fff;font-size:1.1rem;margin-bottom:14px;}
+  .contact-side .info-row{display:flex;align-items:center;gap:12px;font-size:.92rem;padding:8px 0;color:rgba(255,255,255,.85);}
+  .contact-side .info-row .icon{width:18px;height:18px;stroke:var(--mint);flex-shrink:0;}
+  .field-error{color:var(--accent);font-size:.78rem;margin-top:6px;display:none;}
+  .form-row.invalid input,.form-row.invalid select{border-color:var(--accent);}
+  .form-row.invalid .field-error{display:block;}
+
+  /* EQUIPO */
+  .team-layout{display:grid;grid-template-columns:1fr;gap:32px;align-items:center;}
+  .team-photo-main{margin:0;border-radius:var(--radius-lg);overflow:hidden;box-shadow:var(--shadow);position:relative;}
+  .team-photo-main img{display:block;width:100%;height:100%;object-fit:cover;aspect-ratio:11/8;}
+  .team-photo-main figcaption{position:absolute;left:0;right:0;bottom:0;padding:26px 18px 14px;background:linear-gradient(180deg,rgba(11,42,74,0) 0%,rgba(11,42,74,.72) 100%);color:#fff;font-size:.82rem;font-weight:600;}
+  .team-content .eyebrow{color:var(--accent);}
+  .team-content h2{font-size:1.8rem;margin-bottom:14px;}
+  .team-content .lead{color:var(--text-muted);font-size:1.02rem;margin-bottom:22px;}
+  .doctor-card{display:flex;align-items:center;gap:16px;background:#fff;border:1px solid var(--border);border-radius:var(--radius);padding:16px 18px;box-shadow:var(--shadow-sm);margin-bottom:22px;}
+  .doctor-card img{width:64px;height:64px;border-radius:50%;object-fit:cover;flex-shrink:0;}
+  .doctor-card .doctor-name{font-weight:800;color:var(--navy-900);font-size:1rem;line-height:1.2;}
+  .doctor-card .doctor-role{font-size:.85rem;color:var(--text-muted);margin-top:3px;}
+  .team-points{display:grid;gap:12px;}
+  .team-points li{display:flex;gap:10px;align-items:flex-start;font-size:.94rem;color:var(--text);font-weight:600;}
+  .team-points li .icon{width:18px;height:18px;stroke:var(--mint);margin-top:2px;flex-shrink:0;}
+
+  /* GALERÍA DEL CONSULTORIO */
+  .office-gallery{margin-top:56px;}
+  .office-gallery-head{max-width:620px;margin:0 0 22px;}
+  .office-gallery-head h3{font-size:1.3rem;margin-bottom:8px;}
+  .office-gallery-head p{color:var(--text-muted);font-size:.95rem;}
+  .office-gallery-grid{display:grid;grid-template-columns:repeat(2,1fr);gap:14px;}
+  .office-gallery-item{position:relative;margin:0;border-radius:var(--radius);overflow:hidden;box-shadow:var(--shadow-sm);}
+  .office-gallery-item img{display:block;width:100%;height:100%;object-fit:cover;aspect-ratio:4/3;}
+  .office-gallery-item figcaption{position:absolute;left:0;right:0;bottom:0;padding:20px 12px 10px;background:linear-gradient(180deg,rgba(11,42,74,0) 0%,rgba(11,42,74,.68) 100%);color:#fff;font-size:.78rem;font-weight:700;}
+
+  /* WHATSAPP FLOAT */
+  .wa-float{position:fixed;bottom:22px;right:22px;width:60px;height:60px;border-radius:50%;display:flex;align-items:center;justify-content:center;z-index:250;text-decoration:none;}
+  .wa-float img{width:100%;height:100%;object-fit:contain;filter:drop-shadow(0 6px 16px rgba(0,0,0,.28));}
+  .wa-float::before{content:"";position:absolute;inset:6px;border-radius:50%;background:#25D366;animation:pulse-ring 2.2s cubic-bezier(.4,0,.6,1) infinite;z-index:-1;}
+  @keyframes pulse-ring{0%{transform:scale(1);opacity:.6;}100%{transform:scale(1.8);opacity:0;}}
+  @media (prefers-reduced-motion:reduce){.wa-float::before{animation:none;}}
+
+  /* FINAL CTA */
+  .final-cta{background:linear-gradient(135deg,var(--navy-900),var(--navy-700));color:#fff;text-align:center;padding:80px 0;}
+  .final-cta h2{color:#fff;font-size:2rem;max-width:620px;margin:0 auto 16px;}
+  .final-cta p{color:rgba(255,255,255,.82);font-size:1.05rem;max-width:520px;margin:0 auto 30px;}
+  .final-cta-actions{display:flex;flex-direction:column;align-items:center;gap:16px;}
+  .final-cta-phone{font-size:1.5rem;font-weight:800;color:#fff;text-decoration:none;display:flex;align-items:center;gap:10px;}
+  .final-cta-phone .icon{width:22px;height:22px;stroke:var(--mint);}
+
+  /* FOOTER */
+  footer{background:var(--navy-900);color:rgba(255,255,255,.75);padding:56px 0 24px;font-size:.9rem;}
+  .footer-grid{display:grid;grid-template-columns:1fr;gap:36px;margin-bottom:36px;}
+  .footer-col h4{color:#fff;font-size:.95rem;margin-bottom:16px;}
+  .footer-col .logo-text{color:#fff;}
+  .footer-col .logo-text span{color:rgba(255,255,255,.6);}
+  .footer-col p, .footer-col li{color:rgba(255,255,255,.68);margin-bottom:10px;line-height:1.6;}
+  .footer-col a{text-decoration:none;color:rgba(255,255,255,.68);}
+  .footer-col a:hover{color:#fff;}
+  .footer-social{display:flex;gap:10px;margin-top:10px;}
+  .footer-social a{width:36px;height:36px;border-radius:50%;background:rgba(255,255,255,.08);display:flex;align-items:center;justify-content:center;}
+  .footer-social .icon{width:17px;height:17px;stroke:#fff;}
+  .footer-bottom{border-top:1px solid rgba(255,255,255,.12);padding-top:20px;display:flex;flex-direction:column;gap:8px;text-align:center;font-size:.8rem;color:rgba(255,255,255,.5);}
+
+  /* FOCUS VISIBLE */
+  a:focus-visible, button:focus-visible, input:focus-visible, select:focus-visible, textarea:focus-visible{outline:3px solid var(--mint);outline-offset:2px;}
+
+  /* TABLET / DESKTOP */
+  @media (min-width:700px){
+    .qualify-list, .realistic-points, .candidacy-grid, .process-grid{grid-template-columns:repeat(2,1fr);}
+    .services-grid{grid-template-columns:repeat(4,1fr);}
+    .footer-grid{grid-template-columns:repeat(2,1fr);}
+  }
+  @media (min-width:860px){
+    .main-nav{display:block;}
+    .hamburger{display:none;}
+    .header-actions .btn-primary{display:inline-flex;}
+    .hero-grid{grid-template-columns:1.05fr 1fr;gap:56px;}
+    .hero-text h1{font-size:2.7rem;}
+    .realistic{grid-template-columns:1fr 1fr;padding:56px 60px;}
+    .contact-wrap{grid-template-columns:1.3fr 1fr;}
+    .team-layout{grid-template-columns:1.1fr 1fr;gap:48px;}
+    .office-gallery-grid{grid-template-columns:repeat(4,1fr);}
+    .section{padding:88px 0;}
+    .footer-grid{grid-template-columns:2fr 1fr 1fr 1fr;}
+  }
+  @media (min-width:1024px){
+    .services-grid{grid-template-columns:repeat(4,1fr);}
+  }
+</style>
+</head>
+<body>
+
+<!-- ICON LIBRARY (símbolos SVG reutilizables, decorativos) -->
+<svg width="0" height="0" style="position:absolute" aria-hidden="true">
+<defs>
+<symbol id="i-tooth" viewBox="0 0 24 24"><path d="M12 4.6c-1.5 0-2.3.8-3.6.8-1.4 0-2.5-1.1-4-.4C2.7 5.7 2.2 8.3 2.9 11c.7 2.7 2.2 6.4 3.7 7.9.8.8 1.5 1.1 2 1.1.9 0 1.2-1.2 1.7-1.2.5 0 .8 1.2 1.7 1.2.5 0 1.2-.3 2-1.1 1.5-1.5 3-5.2 3.7-7.9.7-2.7.2-5.3-1.5-6-1.5-.7-2.6.4-4 .4-1.3 0-2.1-.8-3.6-.8" stroke-linecap="round" stroke-linejoin="round"/><path d="M9.5 9.2c.6.5 1.6.5 2.2 0" stroke-linecap="round"/></symbol>
+<symbol id="i-check" viewBox="0 0 24 24"><path d="M4 12.5l5 5L20 6" stroke-linecap="round" stroke-linejoin="round"/></symbol>
+<symbol id="i-x" viewBox="0 0 24 24"><path d="M5 5l14 14M19 5L5 19" stroke-linecap="round"/></symbol>
+<symbol id="i-star" viewBox="0 0 24 24"><path d="M12 3.5l2.6 5.5 6 .8-4.4 4.2 1.1 6-5.3-2.9-5.3 2.9 1.1-6-4.4-4.2 6-.8z" stroke-linejoin="round"/></symbol>
+<symbol id="i-shield" viewBox="0 0 24 24"><path d="M12 3l7 3v5c0 5-3 8.5-7 10-4-1.5-7-5-7-10V6z" stroke-linejoin="round"/><path d="M9 12l2 2 4-4" stroke-linecap="round" stroke-linejoin="round"/></symbol>
+<symbol id="i-face" viewBox="0 0 24 24"><circle cx="12" cy="12" r="8.5"/><path d="M9 10.5h.01M15 10.5h.01" stroke-linecap="round" stroke-width="2.4"/><path d="M8.5 14.5c1.2 1.4 5.8 1.4 7 0" stroke-linecap="round"/></symbol>
+<symbol id="i-ruler" viewBox="0 0 24 24"><path d="M3 16l5-5 3 3 8-8" stroke-linecap="round" stroke-linejoin="round"/><path d="M14 6l4 4M17 3l4 4" stroke-linecap="round"/></symbol>
+<symbol id="i-chat-open" viewBox="0 0 24 24"><path d="M4 4h16v11H8l-4 4z" stroke-linejoin="round"/></symbol>
+<symbol id="i-implant" viewBox="0 0 24 24"><path d="M12 3.5c-2.3 0-3.6 1.3-5 1.3-.9 0-1.6-.7-2.3 0-.7.7-.4 2.5.1 4.1.5 1.6 1.4 3.4 2.2 4v6.6a1 1 0 001 1h1v-3l1-2h2l1 2v3h1a1 1 0 001-1v-6.6c.8-.6 1.7-2.4 2.2-4 .5-1.6.8-3.4.1-4.1-.7-.7-1.4 0-2.3 0-1.4 0-2.7-1.3-5-1.3" stroke-linejoin="round"/></symbol>
+<symbol id="i-aligner" viewBox="0 0 24 24"><path d="M4 8c2-2 5-3 8-3s6 1 8 3c0 4-1.5 8-4 10-1.3 1-2.6 1-4 1s-2.7 0-4-1c-2.5-2-4-6-4-10z" stroke-linejoin="round"/><path d="M7 9c1.6-1 3.2-1.5 5-1.5S15.4 8 17 9" stroke-linecap="round"/></symbol>
+<symbol id="i-sparkle" viewBox="0 0 24 24"><path d="M12 3v4M12 17v4M3 12h4M17 12h4M5.6 5.6l2.8 2.8M15.6 15.6l2.8 2.8M18.4 5.6l-2.8 2.8M8.4 15.6l-2.8 2.8" stroke-linecap="round"/><circle cx="12" cy="12" r="2.6"/></symbol>
+<symbol id="i-child" viewBox="0 0 24 24"><circle cx="12" cy="9" r="4.2"/><path d="M9.5 8.5h.01M14.5 8.5h.01" stroke-linecap="round" stroke-width="2.2"/><path d="M10 10.6c.7.7 3.3.7 4 0" stroke-linecap="round"/><path d="M5 21c1-4 3.6-6 7-6s6 2 7 6" stroke-linecap="round"/></symbol>
+<symbol id="i-calendar" viewBox="0 0 24 24"><rect x="3.5" y="5" width="17" height="15" rx="2"/><path d="M3.5 9.5h17M8 3v4M16 3v4" stroke-linecap="round"/></symbol>
+<symbol id="i-heart-honest" viewBox="0 0 24 24"><path d="M12 20s-7-4.4-9-9c-1.4-3.3.6-6.5 3.7-6.9 2-.3 3.7 1 4.3 2.4.6-1.4 2.3-2.7 4.3-2.4 3.1.4 5.1 3.6 3.7 6.9-2 4.6-9 9-9 9z" stroke-linejoin="round"/></symbol>
+<symbol id="i-phone" viewBox="0 0 24 24"><path d="M6.5 3.5h3l1.5 4.5-2 1.5c1 2.5 2.5 4 5 5l1.5-2 4.5 1.5v3c0 1-1 2-2.2 1.9C10.9 18.5 5.5 13.1 4.6 5.7 4.5 4.5 5.5 3.5 6.5 3.5z" stroke-linejoin="round"/></symbol>
+<symbol id="i-mail" viewBox="0 0 24 24"><rect x="3.5" y="5.5" width="17" height="13" rx="2"/><path d="M4.5 6.5l7.5 6 7.5-6" stroke-linecap="round" stroke-linejoin="round"/></symbol>
+<symbol id="i-pin" viewBox="0 0 24 24"><path d="M12 21s7-6.5 7-12a7 7 0 10-14 0c0 5.5 7 12 7 12z" stroke-linejoin="round"/><circle cx="12" cy="9" r="2.4"/></symbol>
+<symbol id="i-clock" viewBox="0 0 24 24"><circle cx="12" cy="12" r="8.5"/><path d="M12 7.5V12l3 2" stroke-linecap="round" stroke-linejoin="round"/></symbol>
+<symbol id="i-menu" viewBox="0 0 24 24"><path d="M4 7h16M4 12h16M4 17h16" stroke-linecap="round"/></symbol>
+<symbol id="i-arrow" viewBox="0 0 24 24"><path d="M5 12h14M13 6l6 6-6 6" stroke-linecap="round" stroke-linejoin="round"/></symbol><symbol id="i-plus" viewBox="0 0 24 24"><path d="M12 5v14M5 12h14" stroke-linecap="round"/></symbol>
+<symbol id="i-facebook" viewBox="0 0 24 24"><circle cx="12" cy="12" r="9"/><path d="M13.8 21v-7.2h2.2l.4-2.9h-2.6v-1.8c0-.8.3-1.4 1.5-1.4h1.2V5.1c-.2 0-1-.1-1.9-.1-2 0-3.3 1.2-3.3 3.4v1.9H9v2.9h2.3V21" stroke-linecap="round" stroke-linejoin="round"/></symbol>
+<symbol id="i-instagram" viewBox="0 0 24 24"><rect x="3.5" y="3.5" width="17" height="17" rx="5"/><circle cx="12" cy="12" r="4"/><circle cx="17" cy="7" r=".9" fill="currentColor" stroke="none"/></symbol>
+</defs>
+</svg>
+
+<!-- STICKY: BARRA DE ANUNCIO + HEADER -->
+<div class="sticky-stack">
+  <div class="announce-bar">
+    <div class="container">
+      <span class="announce-msg" data-i18n="announce_msg">Diseño de Sonrisa — Consulta de evaluación sin cargo. Sin compromiso.</span>
+      <a href="tel:+13052664544"><svg class="icon" aria-hidden="true"><use href="#i-phone"/></svg> (305) 266-4544</a>
+    </div>
+  </div>
+  <header class="site-header" id="siteHeader">
+    <div class="container">
+      <a href="#top" class="logo">
+        <span class="logo-badge"><img src="images/logo-official-v2.png" alt="Happy Teeth Dental" width="500" height="500"></span>
+        <span class="logo-text">Happy Teeth Dental<span data-i18n="logo_sub">General &amp; Cosmetic Dentistry</span></span>
+      </a>
+      <nav class="main-nav" aria-label="Navegación principal" data-i18n-aria="aria_nav">
+        <ul>
+          <li><a href="#tratamiento" data-i18n="nav_tratamiento">Tratamiento</a></li>
+          <li><a href="#resultado" data-i18n="nav_resultados">Resultados</a></li>
+          <li><a href="#equipo" data-i18n="nav_equipo">Equipo</a></li>
+          <li><a href="#resenas" data-i18n="nav_resenas">Reseñas</a></li>
+          <li><a href="#faq" data-i18n="nav_preguntas">Preguntas</a></li>
+        </ul>
+      </nav>
+      <div class="header-actions">
+        <div class="lang-toggle" role="group" aria-label="Idioma / Language">
+          <button type="button" class="lang-btn" data-lang="es">ES</button>
+          <button type="button" class="lang-btn" data-lang="en">EN</button>
+        </div>
+        <a href="#contacto" class="btn btn-primary" data-i18n="cta_agendar">Agendar consulta gratis</a>
+        <button class="hamburger" id="menuOpenBtn" aria-label="Abrir menú" data-i18n-aria="aria_abrir_menu" aria-expanded="false" aria-controls="mobileMenu">
+          <svg class="icon" aria-hidden="true"><use href="#i-menu"/></svg>
+        </button>
+      </div>
+    </div>
+  </header>
+</div>
+
+<!-- MENÚ MOBILE -->
+<div class="mobile-menu" id="mobileMenu">
+  <div class="mobile-menu-panel">
+    <div class="mobile-menu-top">
+      <button class="mobile-menu-close" id="menuCloseBtn" aria-label="Cerrar menú" data-i18n-aria="aria_cerrar_menu">
+        <svg class="icon" aria-hidden="true"><use href="#i-x"/></svg>
+      </button>
+    </div>
+    <a href="#tratamiento" data-i18n="nav_tratamiento">Tratamiento</a>
+    <a href="#resultado" data-i18n="nav_resultados">Resultados</a>
+    <a href="#candidatura" data-i18n="mobile_candidatura">¿Soy candidato/a?</a>
+    <a href="#equipo" data-i18n="nav_equipo">Equipo</a>
+    <a href="#resenas" data-i18n="nav_resenas">Reseñas</a>
+    <a href="#faq" data-i18n="mobile_faq_full">Preguntas frecuentes</a>
+    <a href="#contacto" data-i18n="mobile_contacto">Contacto</a>
+    <a href="#contacto" class="btn btn-primary btn-block" data-i18n="cta_agendar">Agendar consulta gratis</a>
+  </div>
+</div>
+
+<main id="top">
+<!-- HERO -->
+<section class="hero">
+  <div class="container hero-grid">
+    <div class="hero-text reveal">
+      <span class="eyebrow"><svg class="icon" style="width:14px;height:14px" aria-hidden="true"><use href="#i-sparkle"/></svg> <span data-i18n="hero_eyebrow">Diseño de Sonrisa · West Miami</span></span>
+      <h1 data-i18n="hero_h1">Si evitás sonreír completo en las fotos, esta consulta es para vos.</h1>
+      <p class="sub" data-i18n="hero_sub">En Happy Teeth Dental diseñamos tu sonrisa según la forma de tu cara y tus proporciones naturales — no con una plantilla igual para todos. Evaluación honesta, sin compromiso, con el Dr. Alejandro Rodriguez, DDS.</p>
+      <div class="hero-ctas">
+        <a href="#contacto" class="btn btn-primary" data-i18n="hero_cta_primary">Ver si soy candidato/a</a>
+        <a href="#proceso" class="btn btn-secondary" data-i18n="hero_cta_secondary">¿Qué pasa después?</a>
+      </div>
+      <div class="social-proof-line">
+        <span class="stars">★★★★★</span>
+        <span data-i18n="hero_social_proof">4.9 sobre 297 reseñas en Google</span>
+      </div>
+    </div>
+    <div class="hero-visual reveal">
+      <figure class="ba-frame">
+        <!-- Foto real de antes/después del tratamiento ancla (caso real del consultorio). REEMPLAZAR por otra si se desea destacar otro caso. -->
+        <img src="images/antes-despues-1.jpg" alt="Caso real de diseño de sonrisa en Happy Teeth Dental: antes con dientes desgastados y descoloridos, después con sonrisa restaurada" loading="eager" width="1100" height="1078" data-i18n-alt="hero_img_alt">
+        <figcaption class="ba-tag ba-tag-top" data-i18n="tag_antes">Antes</figcaption>
+        <figcaption class="ba-tag ba-tag-bottom" data-i18n="tag_despues">Después</figcaption>
+        <span class="ba-real-badge" data-i18n="ba_real_badge">Caso real · sin retoques</span>
+      </figure>
+      <div class="hero-badges">
+        <div class="price-card accent-card">
+          <div class="num" data-i18n="badge_sin_cargo">Sin cargo</div>
+          <div class="label" data-i18n="badge_sin_cargo_label">Consulta de evaluación</div>
+        </div>
+        <div class="price-card">
+          <div class="num"><svg class="icon" aria-hidden="true"><use href="#i-star"/></svg>4.9</div>
+          <div class="label" data-i18n="badge_google_label">297 reseñas en Google</div>
+        </div>
+        <div class="price-card">
+          <div class="num">100%</div>
+          <div class="label" data-i18n="badge_plan_label">Plan a tu medida</div>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ESTA CONSULTA ES PARA VOS SI -->
+<section class="section" id="tratamiento">
+  <div class="container">
+    <div class="section-head reveal">
+      <span class="eyebrow" data-i18n="tratamiento_eyebrow">Diseño de Sonrisa</span>
+      <h2 data-i18n="tratamiento_h2">Esta consulta es para vos si…</h2>
+      <p data-i18n="tratamiento_p">No hace falta tener un caso "extremo" para empezar. Esta evaluación está pensada para pacientes que reconocen alguna de estas situaciones:</p>
+    </div>
+    <div class="qualify-list">
+      <div class="qualify-item reveal">
+        <span class="icon-wrap"><svg class="icon" aria-hidden="true"><use href="#i-face"/></svg></span>
+        <p data-i18n="qualify_1">Evitás sonreír completo en fotos, videollamadas o eventos importantes.</p>
+      </div>
+      <div class="qualify-item reveal">
+        <span class="icon-wrap"><svg class="icon" aria-hidden="true"><use href="#i-sparkle"/></svg></span>
+        <p data-i18n="qualify_2">Te incomoda el color, la forma o el desgaste de uno o varios dientes.</p>
+      </div>
+      <div class="qualify-item reveal">
+        <span class="icon-wrap"><svg class="icon" aria-hidden="true"><use href="#i-x"/></svg></span>
+        <p data-i18n="qualify_3">Ya probaste blanqueamientos o kits caseros y no fue suficiente.</p>
+      </div>
+      <div class="qualify-item reveal">
+        <span class="icon-wrap"><svg class="icon" aria-hidden="true"><use href="#i-shield"/></svg></span>
+        <p data-i18n="qualify_4">Querés saber, con claridad y sin presión, qué es realista para tu caso antes de decidir algo.</p>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- RESULTADO REALISTA -->
+<section class="section" id="resultado">
+  <div class="container">
+    <div class="realistic reveal">
+      <div>
+        <span class="eyebrow" data-i18n="resultado_eyebrow">Sin exagerar</span>
+        <h2 data-i18n="resultado_h2">Un resultado que se vea como vos — no como "trabajo dental"</h2>
+        <p class="body" data-i18n="resultado_p">El miedo más común antes de un diseño de sonrisa no es el procedimiento en sí: es terminar con dientes parejos pero artificiales. Por eso en Happy Teeth Dental el plan se piensa a partir de la forma de tu cara, el tono de tu piel y las proporciones naturales de tus propios dientes — no de un molde único para todos los pacientes.</p>
+      </div>
+      <div class="realistic-points">
+        <div class="realistic-point">
+          <svg class="icon" aria-hidden="true"><use href="#i-ruler"/></svg>
+          <p data-i18n="resultado_point1">Planificación personalizada según tu rostro y tu sonrisa actual, no una plantilla estándar.</p>
+        </div>
+        <div class="realistic-point">
+          <svg class="icon" aria-hidden="true"><use href="#i-tooth"/></svg>
+          <p data-i18n="resultado_point2">Se respeta la anatomía natural de tus dientes y encías, no se fuerza un molde parejo.</p>
+        </div>
+        <div class="realistic-point">
+          <svg class="icon" aria-hidden="true"><use href="#i-chat-open"/></svg>
+          <p data-i18n="resultado_point3">Conversación abierta sobre expectativas antes de empezar cualquier procedimiento.</p>
+        </div>
+        <div class="realistic-point">
+          <svg class="icon" aria-hidden="true"><use href="#i-heart-honest"/></svg>
+          <p data-i18n="resultado_point4">El objetivo es que te veas cuidado/a — no distinto/a de quién sos.</p>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- CANDIDATURA HONESTA -->
+<section class="section" id="candidatura">
+  <div class="container">
+    <div class="section-head center reveal">
+      <span class="eyebrow" data-i18n="candidatura_eyebrow">Honestidad primero</span>
+      <h2 data-i18n="candidatura_h2">¿Sos candidato/a? Una mirada honesta antes de tu consulta</h2>
+      <p data-i18n="candidatura_p">Preferimos que lo sepas de antemano, en vez de sorprenderte en el consultorio.</p>
+    </div>
+    <div class="candidacy-grid">
+      <div class="candidacy-col yes reveal">
+        <h3><svg class="icon" aria-hidden="true"><use href="#i-check"/></svg> <span data-i18n="candidacy_yes_h3">Suele ser buen candidato/a si…</span></h3>
+        <ul>
+          <li><svg class="icon" aria-hidden="true"><use href="#i-check"/></svg> <span data-i18n="candidacy_yes_1">Tenés dientes descoloridos o manchados que no respondieron bien al blanqueamiento.</span></li>
+          <li><svg class="icon" aria-hidden="true"><use href="#i-check"/></svg> <span data-i18n="candidacy_yes_2">Tenés desgaste, pequeñas fracturas o formas irregulares que te gustaría mejorar.</span></li>
+          <li><svg class="icon" aria-hidden="true"><use href="#i-check"/></svg> <span data-i18n="candidacy_yes_3">Tenés espacios o diferencias de tamaño entre dientes.</span></li>
+          <li><svg class="icon" aria-hidden="true"><use href="#i-check"/></svg> <span data-i18n="candidacy_yes_4">Buscás un cambio estético sin someterte a un tratamiento de ortodoncia largo.</span></li>
+        </ul>
+      </div>
+      <div class="candidacy-col no reveal">
+        <h3><svg class="icon" aria-hidden="true"><use href="#i-x"/></svg> <span data-i18n="candidacy_no_h3">Conviene evaluar otra opción primero si…</span></h3>
+        <ul>
+          <li><svg class="icon" aria-hidden="true"><use href="#i-x"/></svg> <span data-i18n="candidacy_no_1">Tenés encías con signos de enfermedad periodontal activa sin tratar.</span></li>
+          <li><svg class="icon" aria-hidden="true"><use href="#i-x"/></svg> <span data-i18n="candidacy_no_2">Aprietas o rechinás los dientes (bruxismo) sin protección nocturna.</span></li>
+          <li><svg class="icon" aria-hidden="true"><use href="#i-x"/></svg> <span data-i18n="candidacy_no_3">Buscás corregir una mala posición dental importante (ahí suele ir primero la ortodoncia).</span></li>
+          <li><svg class="icon" aria-hidden="true"><use href="#i-x"/></svg> <span data-i18n="candidacy_no_4">Todavía no tenés claro tu presupuesto y preferís conocer todas tus opciones antes de avanzar.</span></li>
+        </ul>
+      </div>
+    </div>
+    <p class="candidacy-note reveal" data-i18n="candidacy_note">Nada de esto se decide por foto ni por mensaje: se evalúa en tu consulta, mirando tu boca real.</p>
+  </div>
+</section>
+
+<!-- OTROS SERVICIOS -->
+<section class="section" id="servicios">
+  <div class="container">
+    <div class="section-head reveal">
+      <span class="eyebrow" data-i18n="servicios_eyebrow">También te acompañamos en</span>
+      <h2 data-i18n="servicios_h2">El resto de tu salud dental, en un mismo lugar</h2>
+    </div>
+    <div class="services-grid">
+      <div class="service-card reveal">
+        <span class="icon-wrap"><svg class="icon" aria-hidden="true"><use href="#i-implant"/></svg></span>
+        <h4 data-i18n="servicio_1_h4">Implantes dentales</h4>
+        <p data-i18n="servicio_1_p">Reemplazo fijo de piezas perdidas.</p>
+      </div>
+      <div class="service-card reveal">
+        <span class="icon-wrap"><svg class="icon" aria-hidden="true"><use href="#i-aligner"/></svg></span>
+        <h4 data-i18n="servicio_2_h4">Ortodoncia invisible</h4>
+        <p data-i18n="servicio_2_p">Alineadores casi imperceptibles.</p>
+      </div>
+      <div class="service-card reveal">
+        <span class="icon-wrap"><svg class="icon" aria-hidden="true"><use href="#i-sparkle"/></svg></span>
+        <h4 data-i18n="servicio_3_h4">Blanqueamiento dental</h4>
+        <p data-i18n="servicio_3_p">Un tono más claro, en consultorio.</p>
+      </div>
+      <div class="service-card reveal">
+        <span class="icon-wrap"><svg class="icon" aria-hidden="true"><use href="#i-child"/></svg></span>
+        <h4 data-i18n="servicio_4_h4">Odontopediatría</h4>
+        <p data-i18n="servicio_4_p">Atención dental para los más chicos.</p>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- RESEÑAS -->
+<section class="section" id="resenas" style="background:#fff;">
+  <div class="container">
+    <div class="section-head reveal">
+      <span class="eyebrow" data-i18n="resenas_eyebrow">Pacientes reales</span>
+      <h2 data-i18n="resenas_h2">Lo que dicen quienes ya pasaron por acá</h2>
+    </div>
+    <div class="reviews-badge-row reveal">
+      <div class="google-badge">
+        <svg class="g-icon" viewBox="0 0 48 48" aria-hidden="true"><path fill="#4285F4" d="M45.1 24.5c0-1.6-.1-3.1-.4-4.6H24v9.1h11.9c-.5 2.8-2.1 5.1-4.4 6.7v5.5h7.1c4.2-3.8 6.5-9.5 6.5-16.7z"/><path fill="#34A853" d="M24 46c6 0 10.9-2 14.6-5.3l-7.1-5.5c-2 1.3-4.5 2.1-7.5 2.1-5.8 0-10.6-3.9-12.4-9.1H4.3v5.7C8 41.9 15.4 46 24 46z"/><path fill="#FBBC05" d="M11.6 28.2c-.5-1.3-.7-2.7-.7-4.2s.3-2.9.7-4.2v-5.7H4.3C2.8 17 2 20.4 2 24s.8 7 2.3 9.9z"/><path fill="#EA4335" d="M24 10.7c3.3 0 6.2 1.1 8.5 3.3l6.3-6.3C34.9 4.2 30 2 24 2 15.4 2 8 6.1 4.3 14.1l7.3 5.7c1.8-5.2 6.6-9.1 12.4-9.1z"/></svg>
+        <div class="g-text">
+          <b>4.9</b> <span class="stars">★★★★★</span>
+          <span class="count" data-i18n="badge_google_label">297 reseñas en Google</span>
+        </div>
+      </div>
+      <div class="fb-mention">
+        <svg class="icon" style="width:18px;height:18px;stroke:var(--navy-800)" aria-hidden="true"><use href="#i-facebook"/></svg>
+        <a href="https://www.facebook.com/Happyteethdentalgroup/" target="_blank" rel="noopener">Happy Teeth Dental Group</a> <span data-i18n="seguidores_302">(302 seguidores)</span>
+      </div>
+      <div class="fb-mention">
+        <svg class="icon" style="width:18px;height:18px;stroke:var(--navy-800)" aria-hidden="true"><use href="#i-instagram"/></svg>
+        <a href="https://www.instagram.com/happyteethdentalgroup/" target="_blank" rel="noopener">@happyteethdentalgroup</a>
+      </div>
+    </div>
+    <p class="en-only" style="font-size:.8rem;color:var(--text-muted);font-style:italic;margin:-14px 0 20px;">Reviews shown in their original language (Spanish).</p>
+    <div class="reviews-carousel reveal" id="reviewsCarousel">
+      <div class="reviews-track" id="reviewsTrack">
+        <div class="review-card">
+          <div class="review-card-inner">
+            <span class="stars">★★★★★</span>
+            <p class="quote">"Mi experiencia en esta oficina dental ha sido simplemente extraordinaria. Desde que entras, notas algo único: no es la típica clínica fría, sino un espacio lleno de personalidad... el equipo combina una profesionalidad impecable con una calidez familiar que te hace sentir cuidado, escuchado y en confianza."</p>
+            <div class="review-meta">
+              <span class="review-avatar">IS</span>
+              <div><span class="name">Iris Suri</span><br><span class="meta-sub">Local Guide · 26 opiniones · hace 4 meses</span></div>
+            </div>
+          </div>
+        </div>
+        <div class="review-card">
+          <div class="review-card-inner">
+            <span class="stars">★★★★★</span>
+            <p class="quote">"Desde que entré a la clínica, el trato fue increíble. El personal es muy amable y profesional... el dentista explicó todo con paciencia y resolvió mis dudas antes del procedimiento. Salí muy satisfecho con el resultado."</p>
+            <div class="review-meta">
+              <span class="review-avatar">FB</span>
+              <div><span class="name">Frank Batista</span><br><span class="meta-sub">7 opiniones · hace un año</span></div>
+            </div>
+          </div>
+        </div>
+        <div class="review-card">
+          <div class="review-card-inner">
+            <span class="stars">★★★★★</span>
+            <p class="quote">"Excelente servicio: muy amables todos, desde la recepción (llegué tarde y aún así el trato fue muy educado, lo agradezco). Los dentistas excelentes. ¡Le doy 5 estrellas, claro!"</p>
+            <div class="review-meta">
+              <span class="review-avatar">YP</span>
+              <div><span class="name">Yay Pérez</span><br><span class="meta-sub">7 opiniones · 3 fotos · hace un año</span></div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+    <div class="carousel-dots" id="carouselDots"></div>
+  </div>
+</section>
+
+<!-- CONOCÉ AL EQUIPO -->
+<section class="section" id="equipo">
+  <div class="container">
+    <div class="team-layout">
+      <figure class="team-photo-main reveal">
+        <!-- Foto real del equipo de Happy Teeth Dental -->
+        <img src="images/dr-rodriguez-team.jpg" alt="El Dr. Alejandro Rodriguez-Olivera junto a su equipo en Happy Teeth Dental, West Miami" loading="lazy" width="1100" height="800">
+        <figcaption data-i18n="team_photo_caption">El Dr. Rodriguez-Olivera y su equipo en el consultorio de West Miami</figcaption>
+      </figure>
+      <div class="team-content reveal">
+        <span class="eyebrow" data-i18n="equipo_eyebrow">El equipo</span>
+        <h2 data-i18n="equipo_h2">Conocé a quién te va a atender</h2>
+        <p class="lead" data-i18n="equipo_lead">No vas a ser "un paciente más". Las reseñas repiten lo mismo una y otra vez: acá te tratan como persona, con tiempo y calidez. El consultorio incluso tiene salas temáticas para que la visita se sienta distinta a la típica clínica fría.</p>
+        <div class="doctor-card">
+          <!-- Foto real del Dr. Rodriguez-Olivera -->
+          <img src="images/dr-rodriguez-headshot.jpg" alt="Dr. Alejandro Rodriguez-Olivera, DDS" loading="lazy" width="320" height="346">
+          <div>
+            <div class="doctor-name">Dr. Alejandro Rodriguez-Olivera, DDS</div>
+            <div class="doctor-role" data-i18n="doctor_role">Odontología general y estética</div>
+          </div>
+        </div>
+        <ul class="team-points">
+          <li><svg class="icon" aria-hidden="true"><use href="#i-check"/></svg><span data-i18n="team_point_1">Se habla español e inglés, sin barreras para entender tu caso.</span></li>
+          <li><svg class="icon" aria-hidden="true"><use href="#i-check"/></svg><span data-i18n="team_point_2">Trato cercano, sin apuro y sin presión para que decidas en el momento.</span></li>
+          <li><svg class="icon" aria-hidden="true"><use href="#i-check"/></svg><span data-i18n="team_point_3">Un equipo estable que te acompaña de la primera consulta al resultado final.</span></li>
+        </ul>
+      </div>
+    </div>
+    <div class="office-gallery reveal">
+      <div class="office-gallery-head">
+        <h3 data-i18n="gallery_h3">Un consultorio que no se siente como consultorio</h3>
+        <p data-i18n="gallery_p">Nuestros pacientes suelen notarlo apenas entran: salas con personalidad propia, en vez de la típica clínica fría.</p>
+      </div>
+      <div class="office-gallery-grid">
+        <figure class="office-gallery-item">
+          <!-- Foto real: recepción / sala de espera temática -->
+          <img src="images/consultorio.jpg" alt="Una de las salas de atención de Happy Teeth Dental" loading="lazy" width="957" height="718">
+          <figcaption data-i18n="gallery_cap_1">Sala de atención</figcaption>
+        </figure>
+        <figure class="office-gallery-item">
+          <!-- Foto real: Dr. Rodriguez atendiendo en consultorio -->
+          <img src="images/dr-rodriguez-trabajando.jpg" alt="Dr. Rodriguez-Olivera atendiendo a una paciente en Happy Teeth Dental" loading="lazy" width="922" height="720">
+          <figcaption data-i18n="gallery_cap_2">En plena atención</figcaption>
+        </figure>
+        <figure class="office-gallery-item">
+          <!-- Foto real del equipo -->
+          <img src="images/team.jpg" alt="Parte del equipo de Happy Teeth Dental" loading="lazy" width="960" height="700">
+          <figcaption data-i18n="gallery_cap_3">Nuestro equipo</figcaption>
+        </figure>
+        <figure class="office-gallery-item">
+          <!-- Foto real del equipo -->
+          <img src="images/team-2.jpg" alt="Equipo de recepción y asistentes de Happy Teeth Dental" loading="lazy" width="956" height="795">
+          <figcaption data-i18n="gallery_cap_4">Recepción y asistentes</figcaption>
+        </figure>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- PROCESO -->
+<section class="section" id="proceso">
+  <div class="container">
+    <div class="section-head reveal">
+      <span class="eyebrow" data-i18n="proceso_eyebrow">Sin misterios</span>
+      <h2 data-i18n="proceso_h2">Qué pasa después de que completás el formulario</h2>
+    </div>
+    <div class="process-grid">
+      <div class="process-step reveal">
+        <span class="process-num">1</span>
+        <h3><svg class="icon" style="width:18px;height:18px;stroke:var(--navy-800);display:inline;vertical-align:-3px;margin-right:4px" aria-hidden="true"><use href="#i-chat-open"/></svg><span data-i18n="proceso_1_h3">Nos contás qué querés mejorar</span></h3>
+        <p data-i18n="proceso_1_p">Un par de líneas sobre tu sonrisa o el motivo de tu consulta, nada más.</p>
+      </div>
+      <div class="process-step reveal">
+        <span class="process-num">2</span>
+        <h3><svg class="icon" style="width:18px;height:18px;stroke:var(--navy-800);display:inline;vertical-align:-3px;margin-right:4px" aria-hidden="true"><use href="#i-calendar"/></svg><span data-i18n="proceso_2_h3">Agendamos tu consulta sin cargo</span></h3>
+        <p data-i18n="proceso_2_p">Te confirmamos día y hora por teléfono o WhatsApp, según lo que prefieras.</p>
+      </div>
+      <div class="process-step reveal">
+        <span class="process-num">3</span>
+        <h3><svg class="icon" style="width:18px;height:18px;stroke:var(--navy-800);display:inline;vertical-align:-3px;margin-right:4px" aria-hidden="true"><use href="#i-heart-honest"/></svg><span data-i18n="proceso_3_h3">Te decimos qué es realista</span></h3>
+        <p data-i18n="proceso_3_p">Plan, tiempos y opciones explicados con honestidad, sin presión para decidir en el momento.</p>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- NO TENÉS QUE DECIDIR HOY -->
+<section class="section" style="padding-top:0;">
+  <div class="container">
+    <div class="reassure reveal">
+      <span class="icon-wrap"><svg class="icon" aria-hidden="true"><use href="#i-shield"/></svg></span>
+      <div>
+        <h3 data-i18n="reassure_h3">No tenés que decidir nada hoy</h3>
+        <p data-i18n="reassure_p">La consulta es para informarte, no para presionarte. Vas a salir sabiendo exactamente qué opciones tenés, qué tiempos manejamos y qué inversión implica cada una — y decidís cuándo estés listo/a.</p>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- FAQ -->
+<section class="section" id="faq" style="background:#fff;">
+  <div class="container">
+    <div class="section-head reveal">
+      <span class="eyebrow" data-i18n="faq_eyebrow">Preguntas frecuentes</span>
+      <h2 data-i18n="faq_h2">Antes de escribirnos, quizás esto ya te responde algo</h2>
+    </div>
+    <div id="faqList" style="max-width:760px;">
+      <div class="faq-item reveal">
+        <button class="faq-q" aria-expanded="false"><span data-i18n="faq_q1">¿El diseño de sonrisa duele?</span><svg class="icon" aria-hidden="true"><use href="#i-plus"/></svg></button>
+        <div class="faq-a"><div class="faq-a-inner" data-i18n="faq_a1">Usamos anestesia local cuando es necesario. La mayoría de los pacientes describe el proceso como incómodo por momentos, no doloroso. En tu consulta te explicamos exactamente qué sentirías en tu caso puntual.</div></div>
+      </div>
+      <div class="faq-item reveal">
+        <button class="faq-q" aria-expanded="false"><span data-i18n="faq_q2">¿Cuánto cuesta el tratamiento?</span><svg class="icon" aria-hidden="true"><use href="#i-plus"/></svg></button>
+        <div class="faq-a"><div class="faq-a-inner" data-i18n="faq_a2">Depende de cuántos dientes querés tratar y qué técnica es la indicada para vos, así que no existe un precio único. En tu consulta de evaluación armamos un plan con el costo exacto, sin sorpresas.</div></div>
+      </div>
+      <div class="faq-item reveal">
+        <button class="faq-q" aria-expanded="false"><span data-i18n="faq_q3">¿Cómo sé si soy candidato/a?</span><svg class="icon" aria-hidden="true"><use href="#i-plus"/></svg></button>
+        <div class="faq-a"><div class="faq-a-inner" data-i18n="faq_a3">Se evalúa mirando tu boca real: salud de encías, desgaste, mordida y tus expectativas. Por eso la consulta es el primer paso, no una foto ni un mensaje de WhatsApp.</div></div>
+      </div>
+      <div class="faq-item reveal">
+        <button class="faq-q" aria-expanded="false"><span data-i18n="faq_q4">¿Qué pasa si no soy candidato/a?</span><svg class="icon" aria-hidden="true"><use href="#i-plus"/></svg></button>
+        <div class="faq-a"><div class="faq-a-inner" data-i18n="faq_a4">Te lo decimos directamente y te explicamos qué alternativa tiene más sentido para tu caso. El objetivo es que tomes la mejor decisión, no que aceptes cualquier tratamiento.</div></div>
+      </div>
+      <div class="faq-item reveal">
+        <button class="faq-q" aria-expanded="false"><span data-i18n="faq_q5">¿Cuánto tiempo lleva todo el proceso?</span><svg class="icon" aria-hidden="true"><use href="#i-plus"/></svg></button>
+        <div class="faq-a"><div class="faq-a-inner" data-i18n="faq_a5">Varía según la técnica y la cantidad de piezas a tratar. En tu consulta te damos un cronograma realista para tu caso específico.</div></div>
+      </div>
+      <div class="faq-item reveal">
+        <button class="faq-q" aria-expanded="false"><span data-i18n="faq_q6">¿Tienen planes de financiamiento?</span><svg class="icon" aria-hidden="true"><use href="#i-plus"/></svg></button>
+        <div class="faq-a"><div class="faq-a-inner" data-i18n="faq_a6">Lo conversamos en tu consulta: revisamos juntos las opciones disponibles para que el plan se ajuste a tu presupuesto.</div></div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- CONTACTO -->
+<section class="section" id="contacto">
+  <div class="container">
+    <div class="section-head reveal">
+      <span class="eyebrow" data-i18n="contacto_eyebrow">Último paso</span>
+      <h2 data-i18n="contacto_h2">Contanos qué te gustaría mejorar</h2>
+      <p data-i18n="contacto_p">Completá el formulario y te contactamos para coordinar tu consulta de evaluación sin cargo.</p>
+    </div>
+    <div class="contact-wrap">
+      <form class="contact-form reveal" id="contactForm" novalidate>
+        <!-- PRODUCCIÓN: conectar a NexHealth/LocalMed/Calendly o email real según lo que contrate el cliente -->
+        <div class="form-row">
+          <label for="fName" data-i18n="form_label_name">Nombre completo</label>
+          <input type="text" id="fName" name="name" placeholder="Tu nombre" data-i18n-placeholder="form_ph_name" required>
+          <span class="field-error" data-i18n="form_err_name">Contanos tu nombre para poder saludarte.</span>
+        </div>
+        <div class="form-row">
+          <label for="fPhone" data-i18n="form_label_phone">Teléfono</label>
+          <input type="tel" id="fPhone" name="phone" placeholder="(305) 000-0000" required>
+          <span class="field-error" data-i18n="form_err_phone">Necesitamos un teléfono para contactarte.</span>
+        </div>
+        <div class="form-row">
+          <label for="fReason" data-i18n="form_label_reason">¿Qué te gustaría mejorar?</label>
+          <select id="fReason" name="reason" required>
+            <option value="" data-i18n="form_opt_select">Seleccioná una opción</option>
+            <option data-i18n="form_opt_1">Color / blanqueamiento</option>
+            <option data-i18n="form_opt_2">Forma o alineación de los dientes</option>
+            <option data-i18n="form_opt_3">Dientes rotos, desgastados o con espacios</option>
+            <option data-i18n="form_opt_4">No estoy seguro/a, quiero una evaluación</option>
+            <option data-i18n="form_opt_5">Otro (lo cuento en el mensaje)</option>
+          </select>
+          <span class="field-error" data-i18n="form_err_reason">Elegí la opción que más se acerque a tu caso.</span>
+        </div>
+        <div class="form-row">
+          <label for="fDay" data-i18n="form_label_day">Día preferido de contacto</label>
+          <select id="fDay" name="day">
+            <option value="" data-i18n="form_day_any">Cualquier día esta semana</option>
+            <option data-i18n="form_day_am">Mañana (AM)</option>
+            <option data-i18n="form_day_pm">Tarde (PM)</option>
+            <option data-i18n="form_day_sat">Sábado</option>
+          </select>
+        </div>
+        <div class="form-row">
+          <label for="fMsg" data-i18n="form_label_msg">Mensaje (opcional)</label>
+          <textarea id="fMsg" name="message" placeholder="Contanos cualquier detalle extra que quieras que sepamos" data-i18n-placeholder="form_ph_msg"></textarea>
+        </div>
+        <button type="submit" class="btn btn-primary btn-block" data-i18n="form_submit">Quiero mi consulta sin cargo</button>
+        <div class="form-success" id="formSuccess">
+          <span class="check-circle"><svg class="icon" aria-hidden="true"><use href="#i-check"/></svg></span>
+          <h3 data-i18n="form_success_h3">¡Listo! Ya recibimos tu información.</h3>
+          <p data-i18n="form_success_p">Te contactamos a la brevedad para coordinar tu consulta de evaluación sin cargo. Si preferís, también podés escribirnos directo por WhatsApp.</p>
+        </div>
+      </form>
+      <div class="contact-side reveal">
+        <div class="info-card">
+          <h3 data-i18n="info_card_h3">Alternativas de contacto</h3>
+          <div class="info-row"><svg class="icon" aria-hidden="true"><use href="#i-phone"/></svg> <a href="tel:+13052664544" style="color:inherit;text-decoration:none;">(305) 266-4544</a></div>
+          <div class="info-row"><img src="images/whatsapp-icon.png" alt="" width="18" height="18" style="flex-shrink:0;"> <a href="https://wa.me/13052664544?text=Hola!%20Quiero%20saber%20m%C3%A1s%20sobre%20el%20dise%C3%B1o%20de%20sonrisa%20en%20Happy%20Teeth%20Dental." style="color:inherit;text-decoration:none;" target="_blank" rel="noopener" data-i18n="wa_directo">WhatsApp directo</a></div>
+          <div class="info-row"><svg class="icon" aria-hidden="true"><use href="#i-mail"/></svg> happyteethdentalgroup@yahoo.com</div>
+          <div class="info-row"><svg class="icon" aria-hidden="true"><use href="#i-pin"/></svg> 7976 SW 8th St, West Miami, FL 33144</div>
+          <div class="info-row"><svg class="icon" aria-hidden="true"><use href="#i-heart-honest"/></svg> <span data-i18n="se_habla">Se habla español e inglés</span></div>
+        </div>
+        <figure class="side-photo reveal">
+          <!-- Foto real de la sala de espera del consultorio -->
+          <img src="images/sala-de-estar.jpg" alt="Sala de espera de Happy Teeth Dental en West Miami" loading="lazy" width="1100" height="825">
+        </figure>
+      </div>
+    </div>
+  </div>
+</section>
+</main>
+
+<!-- WHATSAPP FLOTANTE -->
+<a href="https://wa.me/13052664544?text=Hola!%20Quiero%20saber%20m%C3%A1s%20sobre%20el%20dise%C3%B1o%20de%20sonrisa%20en%20Happy%20Teeth%20Dental." class="wa-float" target="_blank" rel="noopener" aria-label="Escribir por WhatsApp" data-i18n-aria="aria_whatsapp">
+  <img src="images/whatsapp-icon.png" alt="" width="34" height="34">
+</a>
+
+<!-- CTA FINAL -->
+<section class="final-cta">
+  <div class="container">
+    <h2 class="reveal" data-i18n="final_h2">Tu sonrisa no tiene por qué esperar más.</h2>
+    <p class="reveal" data-i18n="final_p">Agendá tu consulta de evaluación sin cargo y salí sabiendo, con honestidad, qué es posible para vos.</p>
+    <div class="final-cta-actions reveal">
+      <a href="#contacto" class="btn btn-primary" data-i18n="final_cta">Agendar mi consulta sin cargo</a>
+      <a href="tel:+13052664544" class="final-cta-phone"><svg class="icon" aria-hidden="true"><use href="#i-phone"/></svg>(305) 266-4544</a>
+    </div>
+  </div>
+</section>
+
+<!-- FOOTER -->
+<footer>
+  <div class="container">
+    <div class="footer-grid">
+      <div class="footer-col">
+        <a href="#top" class="logo" style="margin-bottom:14px;display:inline-flex;">
+          <span class="logo-badge"><img src="images/logo-official-v2.png" alt="Happy Teeth Dental" width="500" height="500"></span>
+          <span class="logo-text">Happy Teeth Dental<span data-i18n="doctor_role">Dr. Alejandro Rodriguez, DDS</span></span>
+        </a>
+        <p>7976 SW 8th St, West Miami, FL 33144</p>
+        <p>(305) 266-4544 · happyteethdentalgroup@yahoo.com</p>
+        <div class="footer-social">
+          <a href="https://www.facebook.com/Happyteethdentalgroup/" target="_blank" rel="noopener" aria-label="Facebook de Happy Teeth Dental"><svg class="icon" aria-hidden="true"><use href="#i-facebook"/></svg></a>
+          <a href="https://www.instagram.com/happyteethdentalgroup/" target="_blank" rel="noopener" aria-label="Instagram de Happy Teeth Dental"><svg class="icon" aria-hidden="true"><use href="#i-instagram"/></svg></a>
+        </div>
+      </div>
+      <div class="footer-col">
+        <h4 data-i18n="footer_horarios_h4">Horarios</h4>
+        <!-- REEMPLAZAR: horarios reales de atención -->
+        <p data-i18n="footer_horarios_p">Consultá disponibilidad — te confirmamos horarios al coordinar tu cita.</p>
+      </div>
+      <div class="footer-col">
+        <h4 data-i18n="footer_tratamientos_h4">Tratamientos</h4>
+        <ul>
+          <li><a href="#tratamiento" data-i18n="footer_link_diseno">Diseño de sonrisa</a></li>
+          <li><a href="#servicios" data-i18n="servicio_1_h4">Implantes dentales</a></li>
+          <li><a href="#servicios" data-i18n="servicio_2_h4">Ortodoncia invisible</a></li>
+          <li><a href="#servicios" data-i18n="servicio_4_h4">Odontopediatría</a></li>
+        </ul>
+      </div>
+      <div class="footer-col">
+        <h4 data-i18n="footer_contacto_h4">Contacto</h4>
+        <ul>
+          <li><a href="#contacto" data-i18n="footer_link_agendar">Agendar consulta</a></li>
+          <li><a href="#faq" data-i18n="mobile_faq_full">Preguntas frecuentes</a></li>
+          <li><a href="#resenas" data-i18n="nav_resenas">Reseñas</a></li>
+        </ul>
+      </div>
+    </div>
+    <div class="footer-bottom">
+      <p data-i18n="footer_copyright">© 2026 Happy Teeth Dental, LLC. Todos los derechos reservados.</p>
+      <p><!-- REEMPLAZAR: aviso de privacidad real en producción --><span data-i18n="footer_privacy">Este sitio es una demostración. El aviso de privacidad y los términos definitivos se publicarán en la versión de producción.</span></p>
+    </div>
+  </div>
+</footer>
+
+<script>
+(function(){
+  "use strict";
+
+  /* i18n: diccionario ES/EN */
+  var I18N = {
+    announce_msg:{es:"Diseño de Sonrisa — Consulta de evaluación sin cargo. Sin compromiso.",en:"Smile Design — Free evaluation consultation. No commitment."},
+    logo_sub:{es:"General & Cosmetic Dentistry",en:"General & Cosmetic Dentistry"},
+    nav_tratamiento:{es:"Tratamiento",en:"Treatment"},
+    nav_resultados:{es:"Resultados",en:"Results"},
+    nav_equipo:{es:"Equipo",en:"Team"},
+    nav_resenas:{es:"Reseñas",en:"Reviews"},
+    nav_preguntas:{es:"Preguntas",en:"FAQ"},
+    cta_agendar:{es:"Agendar consulta gratis",en:"Book a free consultation"},
+    aria_abrir_menu:{es:"Abrir menú",en:"Open menu"},
+    aria_cerrar_menu:{es:"Cerrar menú",en:"Close menu"},
+    aria_nav:{es:"Navegación principal",en:"Main navigation"},
+    aria_whatsapp:{es:"Escribir por WhatsApp",en:"Message us on WhatsApp"},
+    mobile_candidatura:{es:"¿Soy candidato/a?",en:"Am I a candidate?"},
+    mobile_faq_full:{es:"Preguntas frecuentes",en:"Frequently asked questions"},
+    mobile_contacto:{es:"Contacto",en:"Contact"},
+    hero_eyebrow:{es:"Diseño de Sonrisa · West Miami",en:"Smile Design · West Miami"},
+    hero_h1:{es:"Si evitás sonreír completo en las fotos, esta consulta es para vos.",en:"If you avoid smiling wide in photos, this consultation is for you."},
+    hero_sub:{es:"En Happy Teeth Dental diseñamos tu sonrisa según la forma de tu cara y tus proporciones naturales — no con una plantilla igual para todos. Evaluación honesta, sin compromiso, con el Dr. Alejandro Rodriguez, DDS.",en:"At Happy Teeth Dental we design your smile around the shape of your face and your natural proportions — not a one-size-fits-all template. Honest evaluation, no commitment, with Dr. Alejandro Rodriguez, DDS."},
+    hero_cta_primary:{es:"Ver si soy candidato/a",en:"See if I'm a candidate"},
+    hero_cta_secondary:{es:"¿Qué pasa después?",en:"What happens next?"},
+    hero_social_proof:{es:"4.9 sobre 297 reseñas en Google",en:"4.9 from 297 Google reviews"},
+    hero_img_alt:{es:"Caso real de diseño de sonrisa en Happy Teeth Dental: antes con dientes desgastados y descoloridos, después con sonrisa restaurada",en:"Real smile design case at Happy Teeth Dental: before with worn, discolored teeth, after with a restored smile"},
+    tag_antes:{es:"Antes",en:"Before"},
+    tag_despues:{es:"Después",en:"After"},
+    ba_real_badge:{es:"Caso real · sin retoques",en:"Real case · unretouched"},
+    badge_sin_cargo:{es:"Sin cargo",en:"No cost"},
+    badge_sin_cargo_label:{es:"Consulta de evaluación",en:"Evaluation consultation"},
+    badge_google_label:{es:"297 reseñas en Google",en:"297 Google reviews"},
+    badge_plan_label:{es:"Plan a tu medida",en:"Plan built for you"},
+    tratamiento_eyebrow:{es:"Diseño de Sonrisa",en:"Smile Design"},
+    tratamiento_h2:{es:"Esta consulta es para vos si…",en:"This consultation is for you if…"},
+    tratamiento_p:{es:'No hace falta tener un caso "extremo" para empezar. Esta evaluación está pensada para pacientes que reconocen alguna de estas situaciones:',en:'You don\'t need an "extreme" case to get started. This evaluation is for patients who recognize any of these situations:'},
+    qualify_1:{es:"Evitás sonreír completo en fotos, videollamadas o eventos importantes.",en:"You avoid smiling fully in photos, video calls, or important events."},
+    qualify_2:{es:"Te incomoda el color, la forma o el desgaste de uno o varios dientes.",en:"The color, shape, or wear of one or more teeth bothers you."},
+    qualify_3:{es:"Ya probaste blanqueamientos o kits caseros y no fue suficiente.",en:"You've already tried whitening or at-home kits and it wasn't enough."},
+    qualify_4:{es:"Querés saber, con claridad y sin presión, qué es realista para tu caso antes de decidir algo.",en:"You want to know, clearly and without pressure, what's realistic for your case before deciding anything."},
+    resultado_eyebrow:{es:"Sin exagerar",en:"No exaggeration"},
+    resultado_h2:{es:'Un resultado que se vea como vos — no como "trabajo dental"',en:'A result that looks like you — not like "dental work"'},
+    resultado_p:{es:"El miedo más común antes de un diseño de sonrisa no es el procedimiento en sí: es terminar con dientes parejos pero artificiales. Por eso en Happy Teeth Dental el plan se piensa a partir de la forma de tu cara, el tono de tu piel y las proporciones naturales de tus propios dientes — no de un molde único para todos los pacientes.",en:"The most common fear before a smile design isn't the procedure itself — it's ending up with teeth that are even but look fake. That's why at Happy Teeth Dental the plan is built around the shape of your face, your skin tone, and the natural proportions of your own teeth — not a single mold for every patient."},
+    resultado_point1:{es:"Planificación personalizada según tu rostro y tu sonrisa actual, no una plantilla estándar.",en:"Personalized planning based on your face and current smile, not a standard template."},
+    resultado_point2:{es:"Se respeta la anatomía natural de tus dientes y encías, no se fuerza un molde parejo.",en:"The natural anatomy of your teeth and gums is respected, not forced into an even mold."},
+    resultado_point3:{es:"Conversación abierta sobre expectativas antes de empezar cualquier procedimiento.",en:"Open conversation about expectations before starting any procedure."},
+    resultado_point4:{es:"El objetivo es que te veas cuidado/a — no distinto/a de quién sos.",en:"The goal is for you to look well cared for — not different from who you are."},
+    candidatura_eyebrow:{es:"Honestidad primero",en:"Honesty first"},
+    candidatura_h2:{es:"¿Sos candidato/a? Una mirada honesta antes de tu consulta",en:"Are you a candidate? An honest look before your consultation"},
+    candidatura_p:{es:"Preferimos que lo sepas de antemano, en vez de sorprenderte en el consultorio.",en:"We'd rather you know beforehand than be surprised at the office."},
+    candidacy_yes_h3:{es:"Suele ser buen candidato/a si…",en:"You're usually a good candidate if…"},
+    candidacy_yes_1:{es:"Tenés dientes descoloridos o manchados que no respondieron bien al blanqueamiento.",en:"You have discolored or stained teeth that didn't respond well to whitening."},
+    candidacy_yes_2:{es:"Tenés desgaste, pequeñas fracturas o formas irregulares que te gustaría mejorar.",en:"You have wear, small chips, or irregular shapes you'd like to improve."},
+    candidacy_yes_3:{es:"Tenés espacios o diferencias de tamaño entre dientes.",en:"You have gaps or size differences between teeth."},
+    candidacy_yes_4:{es:"Buscás un cambio estético sin someterte a un tratamiento de ortodoncia largo.",en:"You want a cosmetic change without going through a long orthodontic treatment."},
+    candidacy_no_h3:{es:"Conviene evaluar otra opción primero si…",en:"It's worth exploring another option first if…"},
+    candidacy_no_1:{es:"Tenés encías con signos de enfermedad periodontal activa sin tratar.",en:"You have gums showing signs of active, untreated periodontal disease."},
+    candidacy_no_2:{es:"Aprietas o rechinás los dientes (bruxismo) sin protección nocturna.",en:"You clench or grind your teeth (bruxism) without a night guard."},
+    candidacy_no_3:{es:"Buscás corregir una mala posición dental importante (ahí suele ir primero la ortodoncia).",en:"You want to correct a significant dental misalignment (orthodontics usually comes first there)."},
+    candidacy_no_4:{es:"Todavía no tenés claro tu presupuesto y preferís conocer todas tus opciones antes de avanzar.",en:"You're still unsure about your budget and prefer to know all your options before moving forward."},
+    candidacy_note:{es:"Nada de esto se decide por foto ni por mensaje: se evalúa en tu consulta, mirando tu boca real.",en:"None of this gets decided by photo or text message: it's evaluated at your consultation, looking at your actual mouth."},
+    servicios_eyebrow:{es:"También te acompañamos en",en:"We're also here for"},
+    servicios_h2:{es:"El resto de tu salud dental, en un mismo lugar",en:"The rest of your dental health, in one place"},
+    servicio_1_h4:{es:"Implantes dentales",en:"Dental implants"},
+    servicio_1_p:{es:"Reemplazo fijo de piezas perdidas.",en:"Fixed replacement for missing teeth."},
+    servicio_2_h4:{es:"Ortodoncia invisible",en:"Invisible orthodontics"},
+    servicio_2_p:{es:"Alineadores casi imperceptibles.",en:"Nearly invisible aligners."},
+    servicio_3_h4:{es:"Blanqueamiento dental",en:"Teeth whitening"},
+    servicio_3_p:{es:"Un tono más claro, en consultorio.",en:"A brighter shade, done in-office."},
+    servicio_4_h4:{es:"Odontopediatría",en:"Pediatric dentistry"},
+    servicio_4_p:{es:"Atención dental para los más chicos.",en:"Dental care for the little ones."},
+    resenas_eyebrow:{es:"Pacientes reales",en:"Real patients"},
+    resenas_h2:{es:"Lo que dicen quienes ya pasaron por acá",en:"What people who've been here say"},
+    seguidores_302:{es:"(302 seguidores)",en:"(302 followers)"},
+    team_photo_caption:{es:"El Dr. Rodriguez-Olivera y su equipo en el consultorio de West Miami",en:"Dr. Rodriguez-Olivera and his team at the West Miami office"},
+    equipo_eyebrow:{es:"El equipo",en:"The team"},
+    equipo_h2:{es:"Conocé a quién te va a atender",en:"Meet who's going to take care of you"},
+    equipo_lead:{es:'No vas a ser "un paciente más". Las reseñas repiten lo mismo una y otra vez: acá te tratan como persona, con tiempo y calidez. El consultorio incluso tiene salas temáticas para que la visita se sienta distinta a la típica clínica fría.',en:'You won\'t be "just another patient." The reviews say the same thing over and over: here you\'re treated like a person, with time and warmth. The office even has themed rooms so your visit feels different from the typical cold clinic.'},
+    doctor_role:{es:"Odontología general y estética",en:"General & cosmetic dentistry"},
+    team_point_1:{es:"Se habla español e inglés, sin barreras para entender tu caso.",en:"Spanish and English spoken, no barriers to understanding your case."},
+    team_point_2:{es:"Trato cercano, sin apuro y sin presión para que decidas en el momento.",en:"Warm, unhurried care with no pressure to decide on the spot."},
+    team_point_3:{es:"Un equipo estable que te acompaña de la primera consulta al resultado final.",en:"A steady team that stays with you from your first visit to the final result."},
+    gallery_h3:{es:"Un consultorio que no se siente como consultorio",en:"An office that doesn't feel like an office"},
+    gallery_p:{es:"Nuestros pacientes suelen notarlo apenas entran: salas con personalidad propia, en vez de la típica clínica fría.",en:"Our patients usually notice it the moment they walk in: rooms with their own personality, instead of the typical cold clinic."},
+    gallery_cap_1:{es:"Sala de atención",en:"Treatment room"},
+    gallery_cap_2:{es:"En plena atención",en:"Mid-appointment"},
+    gallery_cap_3:{es:"Nuestro equipo",en:"Our team"},
+    gallery_cap_4:{es:"Recepción y asistentes",en:"Front desk and assistants"},
+    proceso_eyebrow:{es:"Sin misterios",en:"No mystery"},
+    proceso_h2:{es:"Qué pasa después de que completás el formulario",en:"What happens after you submit the form"},
+    proceso_1_h3:{es:"Nos contás qué querés mejorar",en:"You tell us what you'd like to improve"},
+    proceso_1_p:{es:"Un par de líneas sobre tu sonrisa o el motivo de tu consulta, nada más.",en:"Just a couple of lines about your smile or the reason for your visit."},
+    proceso_2_h3:{es:"Agendamos tu consulta sin cargo",en:"We schedule your free consultation"},
+    proceso_2_p:{es:"Te confirmamos día y hora por teléfono o WhatsApp, según lo que prefieras.",en:"We confirm the day and time by phone or WhatsApp, whichever you prefer."},
+    proceso_3_h3:{es:"Te decimos qué es realista",en:"We tell you what's realistic"},
+    proceso_3_p:{es:"Plan, tiempos y opciones explicados con honestidad, sin presión para decidir en el momento.",en:"Plan, timeline, and options explained honestly, with no pressure to decide on the spot."},
+    reassure_h3:{es:"No tenés que decidir nada hoy",en:"You don't have to decide anything today"},
+    reassure_p:{es:"La consulta es para informarte, no para presionarte. Vas a salir sabiendo exactamente qué opciones tenés, qué tiempos manejamos y qué inversión implica cada una — y decidís cuándo estés listo/a.",en:"The consultation is meant to inform you, not to pressure you. You'll leave knowing exactly what options you have, what timelines we work with, and what each one costs — and you decide when you're ready."},
+    faq_eyebrow:{es:"Preguntas frecuentes",en:"Frequently asked questions"},
+    faq_h2:{es:"Antes de escribirnos, quizás esto ya te responde algo",en:"Before you reach out, this might already answer something"},
+    faq_q1:{es:"¿El diseño de sonrisa duele?",en:"Does smile design hurt?"},
+    faq_a1:{es:"Usamos anestesia local cuando es necesario. La mayoría de los pacientes describe el proceso como incómodo por momentos, no doloroso. En tu consulta te explicamos exactamente qué sentirías en tu caso puntual.",en:"We use local anesthesia when needed. Most patients describe the process as uncomfortable at moments, not painful. At your consultation we'll explain exactly what you'd feel for your specific case."},
+    faq_q2:{es:"¿Cuánto cuesta el tratamiento?",en:"How much does treatment cost?"},
+    faq_a2:{es:"Depende de cuántos dientes querés tratar y qué técnica es la indicada para vos, así que no existe un precio único. En tu consulta de evaluación armamos un plan con el costo exacto, sin sorpresas.",en:"It depends on how many teeth you want to treat and which technique is right for you, so there's no single price. At your evaluation consultation we'll build a plan with the exact cost, no surprises."},
+    faq_q3:{es:"¿Cómo sé si soy candidato/a?",en:"How do I know if I'm a candidate?"},
+    faq_a3:{es:"Se evalúa mirando tu boca real: salud de encías, desgaste, mordida y tus expectativas. Por eso la consulta es el primer paso, no una foto ni un mensaje de WhatsApp.",en:"It's evaluated by looking at your actual mouth: gum health, wear, bite, and your expectations. That's why the consultation is the first step, not a photo or a WhatsApp message."},
+    faq_q4:{es:"¿Qué pasa si no soy candidato/a?",en:"What happens if I'm not a candidate?"},
+    faq_a4:{es:"Te lo decimos directamente y te explicamos qué alternativa tiene más sentido para tu caso. El objetivo es que tomes la mejor decisión, no que aceptes cualquier tratamiento.",en:"We'll tell you directly and explain which alternative makes more sense for your case. The goal is for you to make the best decision, not to accept just any treatment."},
+    faq_q5:{es:"¿Cuánto tiempo lleva todo el proceso?",en:"How long does the whole process take?"},
+    faq_a5:{es:"Varía según la técnica y la cantidad de piezas a tratar. En tu consulta te damos un cronograma realista para tu caso específico.",en:"It varies depending on the technique and the number of teeth involved. At your consultation we'll give you a realistic timeline for your specific case."},
+    faq_q6:{es:"¿Tienen planes de financiamiento?",en:"Do you offer financing plans?"},
+    faq_a6:{es:"Lo conversamos en tu consulta: revisamos juntos las opciones disponibles para que el plan se ajuste a tu presupuesto.",en:"We'll talk about it at your consultation: we'll go over the options together so the plan fits your budget."},
+    contacto_eyebrow:{es:"Último paso",en:"Last step"},
+    contacto_h2:{es:"Contanos qué te gustaría mejorar",en:"Tell us what you'd like to improve"},
+    contacto_p:{es:"Completá el formulario y te contactamos para coordinar tu consulta de evaluación sin cargo.",en:"Fill out the form and we'll reach out to schedule your free evaluation consultation."},
+    form_label_name:{es:"Nombre completo",en:"Full name"},
+    form_ph_name:{es:"Tu nombre",en:"Your name"},
+    form_err_name:{es:"Contanos tu nombre para poder saludarte.",en:"Tell us your name so we can greet you."},
+    form_label_phone:{es:"Teléfono",en:"Phone"},
+    form_err_phone:{es:"Necesitamos un teléfono para contactarte.",en:"We need a phone number to contact you."},
+    form_label_reason:{es:"¿Qué te gustaría mejorar?",en:"What would you like to improve?"},
+    form_opt_select:{es:"Seleccioná una opción",en:"Select an option"},
+    form_opt_1:{es:"Color / blanqueamiento",en:"Color / whitening"},
+    form_opt_2:{es:"Forma o alineación de los dientes",en:"Tooth shape or alignment"},
+    form_opt_3:{es:"Dientes rotos, desgastados o con espacios",en:"Chipped, worn, or gapped teeth"},
+    form_opt_4:{es:"No estoy seguro/a, quiero una evaluación",en:"Not sure, I'd like an evaluation"},
+    form_opt_5:{es:"Otro (lo cuento en el mensaje)",en:"Other (I'll explain in the message)"},
+    form_err_reason:{es:"Elegí la opción que más se acerque a tu caso.",en:"Choose the option closest to your case."},
+    form_label_day:{es:"Día preferido de contacto",en:"Preferred day to be contacted"},
+    form_day_any:{es:"Cualquier día esta semana",en:"Any day this week"},
+    form_day_am:{es:"Mañana (AM)",en:"Morning (AM)"},
+    form_day_pm:{es:"Tarde (PM)",en:"Afternoon (PM)"},
+    form_day_sat:{es:"Sábado",en:"Saturday"},
+    form_label_msg:{es:"Mensaje (opcional)",en:"Message (optional)"},
+    form_ph_msg:{es:"Contanos cualquier detalle extra que quieras que sepamos",en:"Tell us any extra detail you'd like us to know"},
+    form_submit:{es:"Quiero mi consulta sin cargo",en:"I want my free consultation"},
+    form_success_h3:{es:"¡Listo! Ya recibimos tu información.",en:"Done! We've received your information."},
+    form_success_p:{es:"Te contactamos a la brevedad para coordinar tu consulta de evaluación sin cargo. Si preferís, también podés escribirnos directo por WhatsApp.",en:"We'll reach out shortly to schedule your free evaluation consultation. If you'd rather, you can also message us directly on WhatsApp."},
+    info_card_h3:{es:"Alternativas de contacto",en:"Other ways to reach us"},
+    wa_directo:{es:"WhatsApp directo",en:"WhatsApp us directly"},
+    se_habla:{es:"Se habla español e inglés",en:"Spanish and English spoken"},
+    final_h2:{es:"Tu sonrisa no tiene por qué esperar más.",en:"Your smile doesn't have to wait any longer."},
+    final_p:{es:"Agendá tu consulta de evaluación sin cargo y salí sabiendo, con honestidad, qué es posible para vos.",en:"Book your free evaluation consultation and leave knowing, honestly, what's possible for you."},
+    final_cta:{es:"Agendar mi consulta sin cargo",en:"Book my free consultation"},
+    footer_horarios_h4:{es:"Horarios",en:"Hours"},
+    footer_horarios_p:{es:"Consultá disponibilidad — te confirmamos horarios al coordinar tu cita.",en:"Ask about availability — we'll confirm hours when we schedule your visit."},
+    footer_tratamientos_h4:{es:"Tratamientos",en:"Treatments"},
+    footer_link_diseno:{es:"Diseño de sonrisa",en:"Smile design"},
+    footer_contacto_h4:{es:"Contacto",en:"Contact"},
+    footer_link_agendar:{es:"Agendar consulta",en:"Book a consultation"},
+    footer_copyright:{es:"© 2026 Happy Teeth Dental, LLC. Todos los derechos reservados.",en:"© 2026 Happy Teeth Dental, LLC. All rights reserved."},
+    footer_privacy:{es:"Este sitio es una demostración. El aviso de privacidad y los términos definitivos se publicarán en la versión de producción.",en:"This site is a demo. The final privacy notice and terms will be published in the production version."}
+  };
+  var TITLES = {
+    es:"Happy Teeth Dental, LLC | Diseño de Sonrisa en West Miami — Dr. Alejandro Rodriguez, DDS",
+    en:"Happy Teeth Dental, LLC | Smile Design in West Miami — Dr. Alejandro Rodriguez, DDS"
+  };
+  var DESCS = {
+    es:"Diseño de sonrisa a tu medida en Happy Teeth Dental, West Miami. Evaluación honesta, sin compromiso. 4.9★ en Google con 297 reseñas. Se habla español e inglés.",
+    en:"Smile design built around you at Happy Teeth Dental, West Miami. Honest evaluation, no commitment. 4.9★ on Google with 297 reviews. Spanish and English spoken."
+  };
+
+  function applyLang(lang){
+    document.documentElement.lang = lang;
+    document.title = TITLES[lang];
+    var metaDesc = document.querySelector('meta[name="description"]');
+    if(metaDesc) metaDesc.setAttribute('content', DESCS[lang]);
+
+    document.querySelectorAll('[data-i18n]').forEach(function(el){
+      var key = el.getAttribute('data-i18n');
+      if(I18N[key]) el.textContent = I18N[key][lang];
+    });
+    document.querySelectorAll('[data-i18n-placeholder]').forEach(function(el){
+      var key = el.getAttribute('data-i18n-placeholder');
+      if(I18N[key]) el.setAttribute('placeholder', I18N[key][lang]);
+    });
+    document.querySelectorAll('[data-i18n-alt]').forEach(function(el){
+      var key = el.getAttribute('data-i18n-alt');
+      if(I18N[key]) el.setAttribute('alt', I18N[key][lang]);
+    });
+    document.querySelectorAll('[data-i18n-aria]').forEach(function(el){
+      var key = el.getAttribute('data-i18n-aria');
+      if(I18N[key]) el.setAttribute('aria-label', I18N[key][lang]);
+    });
+    document.querySelectorAll('.lang-btn').forEach(function(btn){
+      btn.classList.toggle('active', btn.getAttribute('data-lang') === lang);
+    });
+    document.querySelectorAll('.faq-item.open').forEach(function(item){
+      item.classList.remove('open');
+      item.querySelector('.faq-q').setAttribute('aria-expanded','false');
+      item.querySelector('.faq-a').style.maxHeight = null;
+    });
+    try{ localStorage.setItem('httd_lang', lang); }catch(e){}
+  }
+
+  document.querySelectorAll('.lang-btn').forEach(function(btn){
+    btn.addEventListener('click', function(){ applyLang(btn.getAttribute('data-lang')); });
+  });
+
+  var savedLang = 'es';
+  try{ savedLang = localStorage.getItem('httd_lang') || 'es'; }catch(e){}
+  applyLang(savedLang);
+
+  /* Header scroll state */
+  var header = document.getElementById('siteHeader');
+  function onScroll(){
+    if(window.scrollY > 12){ header.classList.add('scrolled'); }
+    else{ header.classList.remove('scrolled'); }
+  }
+  window.addEventListener('scroll', onScroll, {passive:true});
+  onScroll();
+
+  /* Mobile menu */
+  var menu = document.getElementById('mobileMenu');
+  var openBtn = document.getElementById('menuOpenBtn');
+  var closeBtn = document.getElementById('menuCloseBtn');
+  function openMenu(){ menu.classList.add('open'); openBtn.setAttribute('aria-expanded','true'); document.body.style.overflow='hidden'; }
+  function closeMenu(){ menu.classList.remove('open'); openBtn.setAttribute('aria-expanded','false'); document.body.style.overflow=''; }
+  openBtn.addEventListener('click', openMenu);
+  closeBtn.addEventListener('click', closeMenu);
+  menu.addEventListener('click', function(e){ if(e.target === menu) closeMenu(); });
+  menu.querySelectorAll('a').forEach(function(a){ a.addEventListener('click', closeMenu); });
+  document.addEventListener('keydown', function(e){ if(e.key === 'Escape') closeMenu(); });
+
+  /* Reviews carousel */
+  var track = document.getElementById('reviewsTrack');
+  var dotsWrap = document.getElementById('carouselDots');
+  var cards = track.querySelectorAll('.review-card');
+  var index = 0;
+  var autoplayTimer;
+
+  cards.forEach(function(_, i){
+    var dot = document.createElement('button');
+    dot.setAttribute('aria-label', 'Ver reseña ' + (i+1));
+    if(i === 0) dot.classList.add('active');
+    dot.addEventListener('click', function(){ goTo(i); });
+    dotsWrap.appendChild(dot);
+  });
+
+  function goTo(i){
+    index = (i + cards.length) % cards.length;
+    track.style.transform = 'translateX(-' + (index * 100) + '%)';
+    dotsWrap.querySelectorAll('button').forEach(function(d, di){ d.classList.toggle('active', di === index); });
+  }
+  function nextSlide(){ goTo(index + 1); }
+  function startAutoplay(){ autoplayTimer = setInterval(nextSlide, 5500); }
+  function stopAutoplay(){ clearInterval(autoplayTimer); }
+  startAutoplay();
+
+  var carousel = document.getElementById('reviewsCarousel');
+  carousel.addEventListener('mouseenter', stopAutoplay);
+  carousel.addEventListener('mouseleave', startAutoplay);
+
+  var touchStartX = 0;
+  track.addEventListener('touchstart', function(e){ touchStartX = e.touches[0].clientX; stopAutoplay(); }, {passive:true});
+  track.addEventListener('touchend', function(e){
+    var dx = e.changedTouches[0].clientX - touchStartX;
+    if(dx > 40) goTo(index - 1);
+    else if(dx < -40) goTo(index + 1);
+    startAutoplay();
+  }, {passive:true});
+
+  /* FAQ accordion */
+  document.querySelectorAll('.faq-item').forEach(function(item){
+    var btn = item.querySelector('.faq-q');
+    var panel = item.querySelector('.faq-a');
+    btn.addEventListener('click', function(){
+      var isOpen = item.classList.contains('open');
+      document.querySelectorAll('.faq-item.open').forEach(function(openItem){
+        openItem.classList.remove('open');
+        openItem.querySelector('.faq-q').setAttribute('aria-expanded','false');
+        openItem.querySelector('.faq-a').style.maxHeight = null;
+      });
+      if(!isOpen){
+        item.classList.add('open');
+        btn.setAttribute('aria-expanded','true');
+        panel.style.maxHeight = panel.scrollHeight + 'px';
+      }
+    });
+  });
+
+  /* Contact form validation + fake submit */
+  var form = document.getElementById('contactForm');
+  var success = document.getElementById('formSuccess');
+  form.addEventListener('submit', function(e){
+    e.preventDefault();
+    var valid = true;
+    var required = [
+      {id:'fName', row:'fName'},
+      {id:'fPhone', row:'fPhone'},
+      {id:'fReason', row:'fReason'}
+    ];
+    required.forEach(function(f){
+      var el = document.getElementById(f.id);
+      var row = el.closest('.form-row');
+      if(!el.value.trim()){
+        row.classList.add('invalid');
+        valid = false;
+      } else {
+        row.classList.remove('invalid');
+      }
+    });
+    if(!valid) return;
+    success.classList.add('show');
+    form.reset();
+    setTimeout(function(){ success.classList.remove('show'); }, 6000);
+  });
+
+  /* Scroll reveal animations */
+  var observer = new IntersectionObserver(function(entries){
+    entries.forEach(function(entry){
+      if(entry.isIntersecting){
+        entry.target.classList.add('in-view');
+        observer.unobserve(entry.target);
+      }
+    });
+  }, {threshold:0.15});
+  document.querySelectorAll('.reveal').forEach(function(el){ observer.observe(el); });
+
+})();
+</script>
+</body>
+</html>
